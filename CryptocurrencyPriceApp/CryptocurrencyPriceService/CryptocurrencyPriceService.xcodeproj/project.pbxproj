@@ -20,6 +20,7 @@
 		75E96C1D2204832900B9B656 /* CoindeskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C1C2204832900B9B656 /* CoindeskService.swift */; };
 		75E96C22220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 75E96C1F220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json */; };
 		75E96C23220483D700B9B656 /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C21220483D700B9B656 /* NetworkingMock.swift */; };
+		75E96C252204843E00B9B656 /* CoindeskServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C242204843E00B9B656 /* CoindeskServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		75E96C1C2204832900B9B656 /* CoindeskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoindeskService.swift; sourceTree = "<group>"; };
 		75E96C1F220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurrentPriceIndexStubbedResponse.json; sourceTree = "<group>"; };
 		75E96C21220483D700B9B656 /* NetworkingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
+		75E96C242204843E00B9B656 /* CoindeskServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoindeskServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		75E96BF22204511200B9B656 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				75E96C242204843E00B9B656 /* CoindeskServiceTests.swift */,
 				75E96C192204825D00B9B656 /* EndpointTests.swift */,
 			);
 			path = Tests;
@@ -324,6 +327,7 @@
 			files = (
 				75E96C1A2204825D00B9B656 /* EndpointTests.swift in Sources */,
 				75E96C23220483D700B9B656 /* NetworkingMock.swift in Sources */,
+				75E96C252204843E00B9B656 /* CoindeskServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
