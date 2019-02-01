@@ -1,0 +1,12 @@
+## OS X Finder
+.DS_Store
+
+## CocoaPods
+Pods/
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*xcuserdata*
