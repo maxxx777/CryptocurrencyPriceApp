@@ -11,7 +11,7 @@ import XCTest
 
 class DateExtensionTests: XCTestCase {
 
-    func testExtensionReturnsCorrectParameterValue() {
+    func testCorrectParameterValue() {
         
         //Given
         let date = Date(timeIntervalSince1970: 0)

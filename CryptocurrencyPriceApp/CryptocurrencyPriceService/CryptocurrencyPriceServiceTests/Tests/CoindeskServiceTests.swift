@@ -48,10 +48,10 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .success)
-        let service = CoindeskServiceImp(networking: networking)
+        let service = CoindeskServiceImp(networking: networking)        
         
         //When
-        service.fetchHistoricalPriceIndex(for: Date(),
+        service.fetchHistoricalPriceIndex(for: Date.yesterday,
                                           success: { (historicalPriceIndex) in
             //Then
             XCTAssertEqual(historicalPriceIndex["2013-09-01"], "128.2597", "price should be fethed correctly")
@@ -67,13 +67,13 @@ class CoindeskServiceTests: XCTestCase {
         let service = CoindeskServiceImp(networking: networking)
         
         //When
-        service.fetchHistoricalPriceIndex(for: Date(),
+        service.fetchHistoricalPriceIndex(for: Date.yesterday,
                                           success: { _ in
             XCTFail("success block should not be called")
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
         }
     }
     
@@ -82,12 +82,10 @@ class CoindeskServiceTests: XCTestCase {
         //Given
         let networking = NetworkingMock(result: .success)
         let service = CoindeskServiceImp(networking: networking)
-        let startDate = Date()
-        let endDate = Date()
         
         //When
-        service.fetchHistoricalPriceIndex(between: startDate,
-                                          and: endDate,
+        service.fetchHistoricalPriceIndex(between: Date.dayBeforeYesterday,
+                                          and: Date.yesterday,
                                           success: { (historicalPriceIndex) in
                                             //Then
                                             XCTAssertEqual(historicalPriceIndex["2013-09-01"], "128.2597", "price should be fethed correctly")
@@ -103,18 +101,19 @@ class CoindeskServiceTests: XCTestCase {
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
         let service = CoindeskServiceImp(networking: networking)
-        let startDate = Date()
-        let endDate = Date()
         
         //When
-        service.fetchHistoricalPriceIndex(between: startDate,
-                                          and: endDate,
+        service.fetchHistoricalPriceIndex(between: Date.dayBeforeYesterday,
+                                          and: Date.yesterday,
                                           success: { _ in
                                             XCTFail("success block should not be called")
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+        }
+    }
+    
     func testFailDateIsTodayInHistoricalPriceIndex() {
         
         //Given
