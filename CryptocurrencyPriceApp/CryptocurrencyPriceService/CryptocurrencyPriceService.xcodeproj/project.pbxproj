@@ -14,6 +14,8 @@
 		75E96C1122047E2300B9B656 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0C22047E2300B9B656 /* Result.swift */; };
 		75E96C1222047E2300B9B656 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0D22047E2300B9B656 /* Method.swift */; };
 		75E96C1322047E2300B9B656 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0E22047E2300B9B656 /* Endpoint.swift */; };
+		75E96C172204811E00B9B656 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C152204811E00B9B656 /* Currency.swift */; };
+		75E96C182204811E00B9B656 /* PriceIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C162204811E00B9B656 /* PriceIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		75E96C0C22047E2300B9B656 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		75E96C0D22047E2300B9B656 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		75E96C0E22047E2300B9B656 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		75E96C152204811E00B9B656 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		75E96C162204811E00B9B656 /* PriceIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceIndex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		75E96BC02204440F00B9B656 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				75E96C142204811E00B9B656 /* Model */,
 				75E96C0922047E2300B9B656 /* Networking */,
 			);
 			path = Internal;
@@ -144,6 +149,15 @@
 				75E96C0C22047E2300B9B656 /* Result.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		75E96C142204811E00B9B656 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75E96C152204811E00B9B656 /* Currency.swift */,
+				75E96C162204811E00B9B656 /* PriceIndex.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E96C182204811E00B9B656 /* PriceIndex.swift in Sources */,
+				75E96C172204811E00B9B656 /* Currency.swift in Sources */,
 				75E96C1222047E2300B9B656 /* Method.swift in Sources */,
 				75E96C1122047E2300B9B656 /* Result.swift in Sources */,
 				75E96C0F22047E2300B9B656 /* NetworkingError.swift in Sources */,
