@@ -11,3 +11,10 @@ import Foundation
 enum Currency: String, Decodable {
     case USD, GBP, EUR
 }
+
+extension Currency {
+    
+    static var defaultCurrency: Currency {
+        return .EUR
+    }
+}
