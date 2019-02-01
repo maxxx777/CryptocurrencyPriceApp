@@ -35,7 +35,37 @@ class CoindeskServiceTests: XCTestCase {
             XCTAssertNotNil(error, "error should not be nil")
             XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
         }
+    }
+    
+    func testSuccessFetchHistoricalPriceIndex() {
         
+        //Given
+        let networking = NetworkingMock(result: .success)
+        let service = CoindeskServiceImp(networking: networking)
+        
+        //When
+        service.fetchHistoricalPriceIndex(for: Date(),
+                                          success: { (historicalPriceIndex) in
+            //Then
+            XCTAssertEqual(historicalPriceIndex["2013-09-01"], "128.2597", "price should be fethed correctly")
+        }) { _ in
+            XCTFail("failure block should not be called")
+        }
     }
 
+    func testFailFetchHistoricalPriceIndex() {
+        
+        //Given
+        let networking = NetworkingMock(result: .error(MockingError.anyError))
+        let service = CoindeskServiceImp(networking: networking)
+        
+        //When
+        service.fetchCurrentPriceIndex(success: { (priceIndex) in
+            XCTFail("success block should not be called")
+        }) { error in
+            //Then
+            XCTAssertNotNil(error, "error should not be nil")
+            XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+        }
+    }
 }
