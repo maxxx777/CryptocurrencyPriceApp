@@ -8,16 +8,18 @@
 
 import Foundation
 
+typealias Completion = (Result) -> Void
+
 protocol Networking {
     
-    func call(_ endpoint: Endpoint, completion: @escaping (Result) -> Void)
+    func call(_ endpoint: Endpoint, completion: @escaping Completion)
 }
 
 class NetworkingImp: Networking {
     
     private let urlSession = URLSession.shared
     
-    func call(_ endpoint: Endpoint, completion: @escaping (Result) -> Void) {
+    func call(_ endpoint: Endpoint, completion: @escaping Completion) {
         
         guard let url = endpoint.url else {
             completion(.failure(NetworkingError.wrongEndpointURL))
