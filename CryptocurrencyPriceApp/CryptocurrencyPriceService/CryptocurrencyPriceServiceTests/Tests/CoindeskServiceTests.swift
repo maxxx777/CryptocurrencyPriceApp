@@ -35,7 +35,7 @@ class CoindeskServiceTests: XCTestCase {
         let service = CoindeskServiceImp(networking: networking)
         
         //When
-        service.fetchCurrentPriceIndex(success: { (priceIndex) in
+        service.fetchCurrentPriceIndex(success: { _ in
             XCTFail("success block should not be called")
         }) { error in
             //Then
@@ -67,7 +67,8 @@ class CoindeskServiceTests: XCTestCase {
         let service = CoindeskServiceImp(networking: networking)
         
         //When
-        service.fetchCurrentPriceIndex(success: { (priceIndex) in
+        service.fetchHistoricalPriceIndex(for: Date(),
+                                          success: { _ in
             XCTFail("success block should not be called")
         }) { error in
             //Then
