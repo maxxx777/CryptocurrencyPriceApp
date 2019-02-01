@@ -18,3 +18,16 @@ extension Date {
         return dateFormatter.string(from: self)
     }
 }
+
+extension Date {
+    
+    var isPastDay: Bool {
+        
+        return Date().isFutureDay(after: self)
+    }
+    
+    func isFutureDay(after date: Date) -> Bool {
+        
+        return Calendar.current.compare(self, to: date, toGranularity: .day) == .orderedDescending
+    }
+}

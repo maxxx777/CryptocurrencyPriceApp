@@ -19,4 +19,30 @@ class DateExtensionTests: XCTestCase {
         //Then
         XCTAssertEqual(date.parameterValue, "1970-01-01", "Date has wrong parameter value")
     }
+    
+    func testIsPastDayTrue() {
+        
+        //Then
+        XCTAssert(Date.yesterday.isPastDay, "It should be past day")
+    }
+    
+    func testIsPastDayFalse() {
+        
+        //Then
+        XCTAssertFalse(Date.tomorrow.isPastDay, "It should not be past day")
+        XCTAssertFalse(Date.today.isPastDay, "It should not be past day")
+    }
+    
+    func testIsFutureDayTrue() {
+        
+        //Then
+        XCTAssert(Date.tomorrow.isFutureDay(after: Date.today), "It should be future day")
+    }
+    
+    func testIsFutureDayFalse() {
+        
+        //Then
+        XCTAssertFalse(Date.yesterday.isFutureDay(after: Date.today), "It should not be future day")
+        XCTAssertFalse(Date.today.isFutureDay(after: Date.today), "It should not be future day")
+    }
 }
