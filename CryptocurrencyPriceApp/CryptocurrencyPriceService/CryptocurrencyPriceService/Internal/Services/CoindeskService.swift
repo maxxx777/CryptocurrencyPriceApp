@@ -74,6 +74,7 @@ extension CoindeskServiceImp: CoindeskService {
     
     func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
         
+        //add client checking, as coindesk remote api returns error if date is equal or more than today
         guard date.isPastDay else {
             failure?(Errors.wrongDateParameter)            
             return
@@ -86,6 +87,7 @@ extension CoindeskServiceImp: CoindeskService {
     
     func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
         
+        //add client checking, as coindesk remote api returns error either if date is equal or more than today, or start date more than end date
         guard startDate.isPastDay && endDate.isFutureDay(after: startDate) else {
             failure?(Errors.wrongDateParameter)
             return
