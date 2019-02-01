@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75E96BA42204414F00B9B656 /* CryptocurrencyPriceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96B9A2204414F00B9B656 /* CryptocurrencyPriceService.framework */; };
-		75E96BA92204414F00B9B656 /* CryptocurrencyPriceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96BA82204414F00B9B656 /* CryptocurrencyPriceServiceTests.swift */; };
-		75E96BAB2204414F00B9B656 /* CryptocurrencyPriceService.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E96B9D2204414F00B9B656 /* CryptocurrencyPriceService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75E96BE2220449F600B9B656 /* CryptocurrencyPriceService.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +23,10 @@
 
 /* Begin PBXFileReference section */
 		75E96B9A2204414F00B9B656 /* CryptocurrencyPriceService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptocurrencyPriceService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75E96B9D2204414F00B9B656 /* CryptocurrencyPriceService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptocurrencyPriceService.h; sourceTree = "<group>"; };
-		75E96B9E2204414F00B9B656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E96BA32204414F00B9B656 /* CryptocurrencyPriceServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptocurrencyPriceServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75E96BA82204414F00B9B656 /* CryptocurrencyPriceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyPriceServiceTests.swift; sourceTree = "<group>"; };
-		75E96BAA2204414F00B9B656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptocurrencyPriceService.h; sourceTree = "<group>"; };
+		75E96BBF2204440F00B9B656 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75E96BF62204511200B9B656 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +69,9 @@
 		75E96B9C2204414F00B9B656 /* CryptocurrencyPriceService */ = {
 			isa = PBXGroup;
 			children = (
-				75E96B9D2204414F00B9B656 /* CryptocurrencyPriceService.h */,
-				75E96B9E2204414F00B9B656 /* Info.plist */,
+				75E96BC02204440F00B9B656 /* Internal */,
+				75E96BC12204440F00B9B656 /* Public */,
+				75E96BBD2204440F00B9B656 /* Support Files */,
 			);
 			path = CryptocurrencyPriceService;
 			sourceTree = "<group>";
@@ -80,10 +79,48 @@
 		75E96BA72204414F00B9B656 /* CryptocurrencyPriceServiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				75E96BA82204414F00B9B656 /* CryptocurrencyPriceServiceTests.swift */,
-				75E96BAA2204414F00B9B656 /* Info.plist */,
+				75E96BF52204511200B9B656 /* Support Files */,
+				75E96BF22204511200B9B656 /* Tests */,
 			);
 			path = CryptocurrencyPriceServiceTests;
+			sourceTree = "<group>";
+		};
+		75E96BBD2204440F00B9B656 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */,
+				75E96BBF2204440F00B9B656 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		75E96BC02204440F00B9B656 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		75E96BC12204440F00B9B656 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		75E96BF22204511200B9B656 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		75E96BF52204511200B9B656 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75E96BF62204511200B9B656 /* Info.plist */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +130,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E96BAB2204414F00B9B656 /* CryptocurrencyPriceService.h in Headers */,
+				75E96BE2220449F600B9B656 /* CryptocurrencyPriceService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +185,7 @@
 				TargetAttributes = {
 					75E96B992204414F00B9B656 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					75E96BA22204414F00B9B656 = {
 						CreatedOnToolsVersion = 10.1;
@@ -201,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E96BA92204414F00B9B656 /* CryptocurrencyPriceServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,13 +378,14 @@
 		75E96BAF2204414F00B9B656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CryptocurrencyPriceService/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CryptocurrencyPriceService/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -357,6 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = maxxx.CryptocurrencyPriceService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,13 +404,14 @@
 		75E96BB02204414F00B9B656 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CryptocurrencyPriceService/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CryptocurrencyPriceService/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,7 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CryptocurrencyPriceServiceTests/Info.plist;
+				INFOPLIST_FILE = "CryptocurrencyPriceServiceTests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,7 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CryptocurrencyPriceServiceTests/Info.plist;
+				INFOPLIST_FILE = "CryptocurrencyPriceServiceTests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
