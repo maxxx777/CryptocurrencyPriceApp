@@ -25,6 +25,7 @@
 		75E96C2C22048A1B00B9B656 /* HistoricalPriceIndexStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 75E96C2B22048A1B00B9B656 /* HistoricalPriceIndexStubbedResponse.json */; };
 		75E96C31220496BB00B9B656 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C30220496BB00B9B656 /* DateExtensionTests.swift */; };
 		75E96C332204A35500B9B656 /* HistoricalPriceIndexRangeStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 75E96C322204A35500B9B656 /* HistoricalPriceIndexRangeStubbedResponse.json */; };
+		75E96C382204BAFC00B9B656 /* DateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C372204BAFC00B9B656 /* DateMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		75E96C2B22048A1B00B9B656 /* HistoricalPriceIndexStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HistoricalPriceIndexStubbedResponse.json; sourceTree = "<group>"; };
 		75E96C30220496BB00B9B656 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		75E96C322204A35500B9B656 /* HistoricalPriceIndexRangeStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HistoricalPriceIndexRangeStubbedResponse.json; sourceTree = "<group>"; };
+		75E96C372204BAFC00B9B656 /* DateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				75E96C21220483D700B9B656 /* NetworkingMock.swift */,
+				75E96C372204BAFC00B9B656 /* DateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				75E96C1A2204825D00B9B656 /* EndpointTests.swift in Sources */,
 				75E96C31220496BB00B9B656 /* DateExtensionTests.swift in Sources */,
+				75E96C382204BAFC00B9B656 /* DateMock.swift in Sources */,
 				75E96C23220483D700B9B656 /* NetworkingMock.swift in Sources */,
 				75E96C252204843E00B9B656 /* CoindeskServiceTests.swift in Sources */,
 			);
