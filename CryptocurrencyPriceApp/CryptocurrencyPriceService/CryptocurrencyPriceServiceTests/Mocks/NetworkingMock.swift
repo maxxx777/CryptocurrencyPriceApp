@@ -44,6 +44,14 @@ class NetworkingMock: Networking {
             case let .error(error):
                 completion(Result.failure(error))
             }
+        case .historicalPriceIndex(_, _):
+            switch result {
+            case .success:
+                let data = self.data(from: "HistoricalPriceIndexStubbedResponse")
+                completion(Result.success(data!))
+            case let .error(error):
+                completion(Result.failure(error))
+            }
         }
     }
     

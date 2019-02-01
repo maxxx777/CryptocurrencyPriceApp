@@ -12,6 +12,7 @@ enum Endpoint {
     
     case currentPriceIndex
     case currentPriceIndexIn(Currency)
+    case historicalPriceIndex(Date, Currency)
 }
 
 extension Endpoint {
@@ -32,6 +33,9 @@ extension Endpoint {
             return "/currentprice.json"
         case let .currentPriceIndexIn(currency):
             return "/currentprice/\(currency).json"
+        case let .historicalPriceIndex(date, currency):
+            let stringValueForDate = date.parameterValue
+            return "/historical/close.json?start=\(stringValueForDate)&end=\(stringValueForDate)&currency=\(currency)"
         }
     }
     
