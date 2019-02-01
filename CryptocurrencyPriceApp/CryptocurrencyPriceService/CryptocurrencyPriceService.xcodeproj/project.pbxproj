@@ -17,6 +17,7 @@
 		75E96C172204811E00B9B656 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C152204811E00B9B656 /* Currency.swift */; };
 		75E96C182204811E00B9B656 /* PriceIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C162204811E00B9B656 /* PriceIndex.swift */; };
 		75E96C1A2204825D00B9B656 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C192204825D00B9B656 /* EndpointTests.swift */; };
+		75E96C1D2204832900B9B656 /* CoindeskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C1C2204832900B9B656 /* CoindeskService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		75E96C152204811E00B9B656 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		75E96C162204811E00B9B656 /* PriceIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceIndex.swift; sourceTree = "<group>"; };
 		75E96C192204825D00B9B656 /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		75E96C1C2204832900B9B656 /* CoindeskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoindeskService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				75E96C142204811E00B9B656 /* Model */,
 				75E96C0922047E2300B9B656 /* Networking */,
+				75E96C1B2204832900B9B656 /* Services */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -161,6 +164,14 @@
 				75E96C162204811E00B9B656 /* PriceIndex.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		75E96C1B2204832900B9B656 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				75E96C1C2204832900B9B656 /* CoindeskService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E96C182204811E00B9B656 /* PriceIndex.swift in Sources */,
+				75E96C1D2204832900B9B656 /* CoindeskService.swift in Sources */,
 				75E96C172204811E00B9B656 /* Currency.swift in Sources */,
 				75E96C1222047E2300B9B656 /* Method.swift in Sources */,
 				75E96C1122047E2300B9B656 /* Result.swift in Sources */,
