@@ -31,6 +31,20 @@
 			remoteGlobalIDString = 75E96B5E22043FB600B9B656;
 			remoteInfo = CryptocurrencyPriceApp;
 		};
+		75E96BB92204415100B9B656 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75E96B9A2204414F00B9B656;
+			remoteInfo = CryptocurrencyPriceService;
+		};
+		75E96BBB2204415100B9B656 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75E96BA32204414F00B9B656;
+			remoteInfo = CryptocurrencyPriceServiceTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +61,7 @@
 		75E96B7E22043FB700B9B656 /* CryptocurrencyPriceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptocurrencyPriceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B8222043FB700B9B656 /* CryptocurrencyPriceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyPriceAppUITests.swift; sourceTree = "<group>"; };
 		75E96B8422043FB700B9B656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptocurrencyPriceService.xcodeproj; path = CryptocurrencyPriceService/CryptocurrencyPriceService.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +95,7 @@
 				75E96B6122043FB600B9B656 /* CryptocurrencyPriceApp */,
 				75E96B7622043FB700B9B656 /* CryptocurrencyPriceAppTests */,
 				75E96B8122043FB700B9B656 /* CryptocurrencyPriceAppUITests */,
+				75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */,
 				75E96B6022043FB600B9B656 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +139,15 @@
 				75E96B8422043FB700B9B656 /* Info.plist */,
 			);
 			path = CryptocurrencyPriceAppUITests;
+			sourceTree = "<group>";
+		};
+		75E96BB52204414F00B9B656 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75E96BBA2204415100B9B656 /* CryptocurrencyPriceService.framework */,
+				75E96BBC2204415100B9B656 /* CryptocurrencyPriceServiceTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +240,12 @@
 			mainGroup = 75E96B5622043FB600B9B656;
 			productRefGroup = 75E96B6022043FB600B9B656 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 75E96BB52204414F00B9B656 /* Products */;
+					ProjectRef = 75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				75E96B5E22043FB600B9B656 /* CryptocurrencyPriceApp */,
@@ -223,6 +254,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		75E96BBA2204415100B9B656 /* CryptocurrencyPriceService.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptocurrencyPriceService.framework;
+			remoteRef = 75E96BB92204415100B9B656 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		75E96BBC2204415100B9B656 /* CryptocurrencyPriceServiceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptocurrencyPriceServiceTests.xctest;
+			remoteRef = 75E96BBB2204415100B9B656 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		75E96B5D22043FB600B9B656 /* Resources */ = {
