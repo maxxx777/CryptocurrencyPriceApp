@@ -19,10 +19,15 @@ class NetworkingImp: Networking {
     
     private let urlSession = URLSession.shared
     
+    enum Errors: Error {
+        case unknown
+        case wrongEndpointURL
+    }
+    
     func call(_ endpoint: Endpoint, completion: @escaping Completion) {
         
         guard let url = endpoint.url else {
-            completion(.failure(NetworkingError.wrongEndpointURL))
+            completion(.failure(NetworkingImp.Errors.wrongEndpointURL))
             return
         }
         
@@ -33,7 +38,7 @@ class NetworkingImp: Networking {
                                         
             guard let data = data_ else {
                 guard let error = error_ else {
-                    completion(Result.failure(NetworkingError.unknown))
+                    completion(Result.failure(NetworkingImp.Errors.unknown))
                     return
                 }
                 completion(Result.failure(error))

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		75E96BA42204414F00B9B656 /* CryptocurrencyPriceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96B9A2204414F00B9B656 /* CryptocurrencyPriceService.framework */; };
 		75E96BE2220449F600B9B656 /* CryptocurrencyPriceService.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75E96C0F22047E2300B9B656 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0A22047E2300B9B656 /* NetworkingError.swift */; };
 		75E96C1022047E2300B9B656 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0B22047E2300B9B656 /* Networking.swift */; };
 		75E96C1122047E2300B9B656 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0C22047E2300B9B656 /* Result.swift */; };
 		75E96C1222047E2300B9B656 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0D22047E2300B9B656 /* Method.swift */; };
@@ -44,7 +43,6 @@
 		75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptocurrencyPriceService.h; sourceTree = "<group>"; };
 		75E96BBF2204440F00B9B656 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E96BF62204511200B9B656 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75E96C0A22047E2300B9B656 /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		75E96C0B22047E2300B9B656 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		75E96C0C22047E2300B9B656 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		75E96C0D22047E2300B9B656 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				75E96C0E22047E2300B9B656 /* Endpoint.swift */,
 				75E96C0D22047E2300B9B656 /* Method.swift */,
 				75E96C0B22047E2300B9B656 /* Networking.swift */,
-				75E96C0A22047E2300B9B656 /* NetworkingError.swift */,
 				75E96C0C22047E2300B9B656 /* Result.swift */,
 			);
 			path = Networking;
@@ -342,7 +339,6 @@
 				75E96C1122047E2300B9B656 /* Result.swift in Sources */,
 				75E96C2A2204896200B9B656 /* Date+Extension.swift in Sources */,
 				75E96C27220488FD00B9B656 /* HistoricalPriceIndex.swift in Sources */,
-				75E96C0F22047E2300B9B656 /* NetworkingError.swift in Sources */,
 				75E96C1022047E2300B9B656 /* Networking.swift in Sources */,
 				75E96C1322047E2300B9B656 /* Endpoint.swift in Sources */,
 			);
