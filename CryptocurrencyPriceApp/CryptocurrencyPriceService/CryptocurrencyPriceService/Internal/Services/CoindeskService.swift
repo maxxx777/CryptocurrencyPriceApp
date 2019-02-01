@@ -45,6 +45,17 @@ class CoindeskServiceImp {
     
     fileprivate var networking: Networking
     
+    enum Errors: LocalizedError {
+        case wrongDateParameter
+        
+        var errorDescription: String? {
+            switch self {
+            case .wrongDateParameter:
+                return "Can not get result for this date"
+            }
+        }
+    }
+    
     init(networking: Networking) {
         self.networking = networking
     }
