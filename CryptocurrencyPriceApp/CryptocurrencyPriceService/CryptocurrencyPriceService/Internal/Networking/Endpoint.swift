@@ -12,6 +12,9 @@ enum Endpoint {
     
     case currentPriceIndex
     case currentPriceIndexIn(Currency)
+}
+
+extension Endpoint {
     
     var method: Method {
         return .get
