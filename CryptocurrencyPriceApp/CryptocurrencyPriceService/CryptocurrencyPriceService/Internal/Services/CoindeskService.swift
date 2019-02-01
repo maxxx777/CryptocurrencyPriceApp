@@ -74,12 +74,22 @@ extension CoindeskServiceImp: CoindeskService {
     
     func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
         
+        guard date.isPastDay else {
+            failure?(Errors.wrongDateParameter)            
+            return
+        }
+        
         let endpoint = Endpoint.historicalPriceIndex(date, currency)
         
         call(endpoint, success: success, failure: failure)
     }
     
     func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
+        
+        guard startDate.isPastDay && endDate.isFutureDay(after: startDate) else {
+            failure?(Errors.wrongDateParameter)
+            return
+        }
         
         let endpoint = Endpoint.historicalPriceIndexRange(startDate, endDate, currency)
         

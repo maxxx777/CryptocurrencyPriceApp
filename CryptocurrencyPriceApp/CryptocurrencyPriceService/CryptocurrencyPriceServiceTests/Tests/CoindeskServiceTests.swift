@@ -115,6 +115,77 @@ class CoindeskServiceTests: XCTestCase {
             //Then
             XCTAssertNotNil(error, "error should not be nil")
             XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+    func testFailDateIsTodayInHistoricalPriceIndex() {
+        
+        //Given
+        let networking = NetworkingMock(result: .error(MockingError.anyError))
+        let service = CoindeskServiceImp(networking: networking)
+        
+        //When
+        service.fetchHistoricalPriceIndex(for: Date.today,
+                                          success: { _ in
+                                            XCTFail("success block should not be called")
+        }) { error in
+            //Then
+            XCTAssertNotNil(error, "error should not be nil")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
         }
+        
+    }
+    
+    func testFailDateIsInFutureInHistoricalPriceIndex() {
+        
+        //Given
+        let networking = NetworkingMock(result: .error(MockingError.anyError))
+        let service = CoindeskServiceImp(networking: networking)
+        
+        //When
+        service.fetchHistoricalPriceIndex(for: Date.tomorrow,
+                                          success: { _ in
+                                            XCTFail("success block should not be called")
+        }) { error in
+            //Then
+            XCTAssertNotNil(error, "error should not be nil")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
+        }
+        
+    }
+    
+    func testFailStartDateIsTodayInHistoricalPriceIndexRange() {
+        
+        //Given
+        let networking = NetworkingMock(result: .error(MockingError.anyError))
+        let service = CoindeskServiceImp(networking: networking)
+        
+        //When
+        service.fetchHistoricalPriceIndex(between: Date.today,
+                                          and: Date.tomorrow,
+                                          success: { _ in
+                                            XCTFail("success block should not be called")
+        }) { error in
+            //Then
+            XCTAssertNotNil(error, "error should not be nil")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
+        }
+        
+    }
+    
+    func testFailStartDateMoreThanEndDateInHistoricalPriceIndexRange() {
+        
+        //Given
+        let networking = NetworkingMock(result: .error(MockingError.anyError))
+        let service = CoindeskServiceImp(networking: networking)
+        
+        //When
+        service.fetchHistoricalPriceIndex(between: Date.yesterday,
+                                          and: Date.dayBeforeYesterday,
+                                          success: { _ in
+                                            XCTFail("success block should not be called")
+        }) { error in
+            //Then
+            XCTAssertNotNil(error, "error should not be nil")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
+        }
+        
     }
 }
