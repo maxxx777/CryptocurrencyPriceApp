@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		75E96BA42204414F00B9B656 /* CryptocurrencyPriceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96B9A2204414F00B9B656 /* CryptocurrencyPriceService.framework */; };
 		75E96BE2220449F600B9B656 /* CryptocurrencyPriceService.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75E96C0F22047E2300B9B656 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0A22047E2300B9B656 /* NetworkingError.swift */; };
+		75E96C1022047E2300B9B656 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0B22047E2300B9B656 /* Networking.swift */; };
+		75E96C1122047E2300B9B656 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0C22047E2300B9B656 /* Result.swift */; };
+		75E96C1222047E2300B9B656 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0D22047E2300B9B656 /* Method.swift */; };
+		75E96C1322047E2300B9B656 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0E22047E2300B9B656 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,11 @@
 		75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptocurrencyPriceService.h; sourceTree = "<group>"; };
 		75E96BBF2204440F00B9B656 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E96BF62204511200B9B656 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75E96C0A22047E2300B9B656 /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		75E96C0B22047E2300B9B656 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		75E96C0C22047E2300B9B656 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		75E96C0D22047E2300B9B656 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		75E96C0E22047E2300B9B656 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 		75E96BC02204440F00B9B656 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				75E96C0922047E2300B9B656 /* Networking */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -121,6 +132,18 @@
 				75E96BF62204511200B9B656 /* Info.plist */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		75E96C0922047E2300B9B656 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				75E96C0E22047E2300B9B656 /* Endpoint.swift */,
+				75E96C0D22047E2300B9B656 /* Method.swift */,
+				75E96C0B22047E2300B9B656 /* Networking.swift */,
+				75E96C0A22047E2300B9B656 /* NetworkingError.swift */,
+				75E96C0C22047E2300B9B656 /* Result.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E96C1222047E2300B9B656 /* Method.swift in Sources */,
+				75E96C1122047E2300B9B656 /* Result.swift in Sources */,
+				75E96C0F22047E2300B9B656 /* NetworkingError.swift in Sources */,
+				75E96C1022047E2300B9B656 /* Networking.swift in Sources */,
+				75E96C1322047E2300B9B656 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +457,7 @@
 		75E96BB22204414F00B9B656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CryptocurrencyPriceServiceTests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -446,6 +475,7 @@
 		75E96BB32204414F00B9B656 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CryptocurrencyPriceServiceTests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
