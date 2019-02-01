@@ -18,6 +18,9 @@ protocol CoindeskService {
     
     // fetch historical price index for specific date and in specific currency
     func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure)
+    
+    // fetch historical price index for specific range of dates and in specific currency
+    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure)
 }
 
 extension CoindeskService {
@@ -30,6 +33,11 @@ extension CoindeskService {
     // fetch historical price index for specific date and in default currency
     func fetchHistoricalPriceIndex(for date: Date, success: Success<HistoricalPriceIndex>, failure: Failure) {
         fetchHistoricalPriceIndex(for: date, in: Currency.defaultCurrency, success: success, failure: failure)
+    }
+    
+    // fetch historical price index for specific range of dates and in specific currency
+    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, success: Success<HistoricalPriceIndex>, failure: Failure) {
+        fetchHistoricalPriceIndex(between: startDate, and: endDate, in: Currency.defaultCurrency, success: success, failure: failure)
     }
 }
 
@@ -50,18 +58,35 @@ extension CoindeskServiceImp: CoindeskService {
         
         let endpoint = Endpoint.makeCurrentPriceIndexEndpoint(with: currency)
         
-        networking.call(endpoint) { result in
+        call(endpoint, success: success, failure: failure)
+    }
+    
+    func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
+        
+        let endpoint = Endpoint.historicalPriceIndex(date, currency)
+        
+        call(endpoint, success: success, failure: failure)
+    }
+    
+    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
+        
+        let endpoint = Endpoint.historicalPriceIndexRange(startDate, endDate, currency)
+        
+        call(endpoint, success: success, failure: failure)
+    }
+}
+
+fileprivate extension CoindeskServiceImp {
+    
+    func call<T: Decodable>(_ endpoint: Endpoint, success: Success<T>, failure: Failure) {
+        
+        networking.call(endpoint) { [weak self] result in
             
             switch result {
             case let .success(data):
                 
-                do {
-                    let priceIndex = try JSONDecoder().decode(CurrentPriceIndex.self, from: data)
-                    success?(priceIndex)
-                } catch let jsonDecodingError {
-                    failure?(jsonDecodingError)
-                }
-
+                self?.handleSuccess(result: data, into: success, or: failure)
+                
             case let .failure(error):
                 
                 failure?(error)
@@ -69,26 +94,13 @@ extension CoindeskServiceImp: CoindeskService {
         }
     }
     
-    func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
+    func handleSuccess<T: Decodable>(result data: Data, into success: Success<T>, or failure: Failure) {
         
-        let endpoint = Endpoint.historicalPriceIndex(date, currency)
-        
-        networking.call(endpoint) { result in
-            
-            switch result {
-            case let .success(data):
-                
-                do {
-                    let priceIndex = try JSONDecoder().decode(HistoricalPriceIndex.self, from: data)
-                    success?(priceIndex)
-                } catch let jsonDecodingError {
-                    failure?(jsonDecodingError)
-                }
-                
-            case let .failure(error):
-                
-                failure?(error)
-            }
+        do {
+            let result = try JSONDecoder().decode(T.self, from: data)
+            success?(result)
+        } catch let jsonDecodingError {
+            failure?(jsonDecodingError)
         }
     }
 }

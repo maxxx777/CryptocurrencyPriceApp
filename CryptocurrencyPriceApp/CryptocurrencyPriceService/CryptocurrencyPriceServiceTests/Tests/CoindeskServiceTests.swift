@@ -75,4 +75,45 @@ class CoindeskServiceTests: XCTestCase {
             XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
         }
     }
+    
+    func testSuccessFetchHistoricalPriceIndexRange() {
+        
+        //Given
+        let networking = NetworkingMock(result: .success)
+        let service = CoindeskServiceImp(networking: networking)
+        let startDate = Date()
+        let endDate = Date()
+        
+        //When
+        service.fetchHistoricalPriceIndex(between: startDate,
+                                          and: endDate,
+                                          success: { (historicalPriceIndex) in
+                                            //Then
+                                            XCTAssertEqual(historicalPriceIndex["2013-09-01"], "128.2597", "price should be fethed correctly")
+                                            XCTAssertEqual(historicalPriceIndex["2013-09-03"], "127.5915", "price should be fethed correctly")
+                                            XCTAssertEqual(historicalPriceIndex["2013-09-05"], "120.5333", "price should be fethed correctly")                                            
+        }) { _ in
+            XCTFail("failure block should not be called")
+        }
+    }
+    
+    func testFailFetchHistoricalPriceIndexRange() {
+        
+        //Given
+        let networking = NetworkingMock(result: .error(MockingError.anyError))
+        let service = CoindeskServiceImp(networking: networking)
+        let startDate = Date()
+        let endDate = Date()
+        
+        //When
+        service.fetchHistoricalPriceIndex(between: startDate,
+                                          and: endDate,
+                                          success: { _ in
+                                            XCTFail("success block should not be called")
+        }) { error in
+            //Then
+            XCTAssertNotNil(error, "error should not be nil")
+            XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+        }
+    }
 }
