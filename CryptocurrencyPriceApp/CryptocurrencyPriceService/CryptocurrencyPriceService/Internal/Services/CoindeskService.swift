@@ -14,13 +14,13 @@ typealias Failure = ((Error) -> Void)?
 protocol CoindeskService {
     
     // fetch current price index for specific currency
-    func fetchCurrentPriceIndex(in currency: Currency?, success: Success<PriceIndex>, failure: Failure)
+    func fetchCurrentPriceIndex(in currency: Currency?, success: Success<CurrentPriceIndex>, failure: Failure)
 }
 
 extension CoindeskService {
     
     // fetch current price index for EUR, USD, GBP
-    func fetchCurrentPriceIndex(success: Success<PriceIndex>, failure: Failure) {
+    func fetchCurrentPriceIndex(success: Success<CurrentPriceIndex>, failure: Failure) {
         fetchCurrentPriceIndex(in: nil, success: success, failure: failure)
     }
 }
@@ -37,7 +37,7 @@ class CoindeskServiceImp {
 extension CoindeskServiceImp: CoindeskService {
     
     func fetchCurrentPriceIndex(in currency: Currency?,
-                                success: ((PriceIndex) -> Void)?,
+                                success: ((CurrentPriceIndex) -> Void)?,
                                 failure: ((Error) -> Void)?) {
         
         let endpoint = Endpoint.makeCurrentPriceIndexEndpoint(with: currency)
@@ -48,7 +48,7 @@ extension CoindeskServiceImp: CoindeskService {
             case let .success(data):
                 
                 do {
-                    let priceIndex = try JSONDecoder().decode(PriceIndex.self, from: data)
+                    let priceIndex = try JSONDecoder().decode(CurrentPriceIndex.self, from: data)
                     success?(priceIndex)
                 } catch let jsonDecodingError {
                     failure?(jsonDecodingError)
