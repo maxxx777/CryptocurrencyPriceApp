@@ -18,6 +18,8 @@
 		75E96C182204811E00B9B656 /* PriceIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C162204811E00B9B656 /* PriceIndex.swift */; };
 		75E96C1A2204825D00B9B656 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C192204825D00B9B656 /* EndpointTests.swift */; };
 		75E96C1D2204832900B9B656 /* CoindeskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C1C2204832900B9B656 /* CoindeskService.swift */; };
+		75E96C22220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 75E96C1F220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json */; };
+		75E96C23220483D700B9B656 /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C21220483D700B9B656 /* NetworkingMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		75E96C162204811E00B9B656 /* PriceIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceIndex.swift; sourceTree = "<group>"; };
 		75E96C192204825D00B9B656 /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		75E96C1C2204832900B9B656 /* CoindeskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoindeskService.swift; sourceTree = "<group>"; };
+		75E96C1F220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurrentPriceIndexStubbedResponse.json; sourceTree = "<group>"; };
+		75E96C21220483D700B9B656 /* NetworkingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		75E96BA72204414F00B9B656 /* CryptocurrencyPriceServiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				75E96C20220483D700B9B656 /* Mocks */,
+				75E96C1E220483D700B9B656 /* Stubs */,
 				75E96BF52204511200B9B656 /* Support Files */,
 				75E96BF22204511200B9B656 /* Tests */,
 			);
@@ -172,6 +178,22 @@
 				75E96C1C2204832900B9B656 /* CoindeskService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		75E96C1E220483D700B9B656 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				75E96C1F220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		75E96C20220483D700B9B656 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				75E96C21220483D700B9B656 /* NetworkingMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E96C22220483D700B9B656 /* CurrentPriceIndexStubbedResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E96C1A2204825D00B9B656 /* EndpointTests.swift in Sources */,
+				75E96C23220483D700B9B656 /* NetworkingMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
