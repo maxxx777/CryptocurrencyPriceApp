@@ -17,7 +17,7 @@ class EndpointTests: XCTestCase {
         let endpoint = Endpoint.currentPriceIndexIn(.EUR)
         
         //Then
-        XCTAssertEqual(endpoint.url?.absoluteString, "https://api.coindesk.com/v1/bpi/currentprice/EUR.json")
+        XCTAssertEqual(endpoint.url?.absoluteString, "https://api.coindesk.com/v1/bpi/currentprice/EUR.json", "Endpoint has wrong url")
     }
 
 

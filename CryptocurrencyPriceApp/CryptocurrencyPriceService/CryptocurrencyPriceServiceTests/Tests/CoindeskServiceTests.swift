@@ -11,12 +11,15 @@ import XCTest
 
 class CoindeskServiceTests: XCTestCase {
 
-    func testSuccessFetchCurrentPriceIndexCorrect() {
+    func testSuccessFetchCurrentPriceIndex() {
         
+        //Given
         let networking = NetworkingMock(result: .success)
         let service = CoindeskServiceImp(networking: networking)
+        
+        //When
         service.fetchCurrentPriceIndex(success: { (priceIndex) in
-            XCTAssertNotNil(priceIndex, "price index should not be nil")
+            //Then
             XCTAssertEqual(priceIndex[Currency.EUR]!, "94.7398", "price in EUR should be fethed correctly")
             XCTAssertEqual(priceIndex[Currency.USD]!, "126.5235", "price in EUR should be fethed correctly")
             XCTAssertEqual(priceIndex[Currency.GBP]!, "79.2495", "price in EUR should be fethed correctly")
@@ -25,13 +28,17 @@ class CoindeskServiceTests: XCTestCase {
         }
     }
     
-    func testFailFetchCurrentPriceIndexCorrect() {
+    func testFailFetchCurrentPriceIndex() {
         
+        //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
         let service = CoindeskServiceImp(networking: networking)
+        
+        //When
         service.fetchCurrentPriceIndex(success: { (priceIndex) in
             XCTFail("success block should not be called")
         }) { error in
+            //Then
             XCTAssertNotNil(error, "error should not be nil")
             XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
         }
