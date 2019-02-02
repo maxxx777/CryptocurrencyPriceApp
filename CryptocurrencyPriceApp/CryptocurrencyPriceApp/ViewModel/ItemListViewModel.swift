@@ -96,8 +96,7 @@ fileprivate extension ItemListViewModelImp {
         
         currentPriceIndexListener.start(with: 60.0,
                                         success: { [weak self] currentPriceIndex in
-                                            self?.updateDataSource(with: currentPriceIndex, failure: failure)
-                                            self?.handle(success: success)
+                                            self?.updateDataSource(with: currentPriceIndex, success: success, failure: failure)
         }) { [weak self] error in
             self?.finishListenCurrentUpdates()
             self?.handle(error: error, into: failure)
@@ -114,9 +113,7 @@ fileprivate extension ItemListViewModelImp {
         
         service.fetchCurrentPriceIndex(success: { [weak self] currentPriceIndex in
             
-            self?.updateDataSource(with: currentPriceIndex, failure: failure)
-            self?.handle(success: success)
-            
+            self?.updateDataSource(with: currentPriceIndex, success: success, failure: failure)            
         }) { [weak self] error in
             self?.handle(error: error, into: failure)
         }
@@ -157,7 +154,7 @@ fileprivate extension ItemListViewModelImp {
                                                  price: historicalPriceIndex[$0] ?? "No Data") }
     }
     
-    func updateDataSource(with currentPriceIndex: CurrentPriceIndex, failure: FailureCompletion?) {
+    func updateDataSource(with currentPriceIndex: CurrentPriceIndex, success: SuccessCompletion?, failure: FailureCompletion?) {
         
         guard let currentPrice = currentPriceIndex[.EUR] else {
             handle(error: Errors.missingData, into: failure)
@@ -172,6 +169,8 @@ fileprivate extension ItemListViewModelImp {
         let currentCellViewModel = ItemCellViewModel(date: today.parameterValue,
                                                      price: currentPrice)
         dataSource[0] = currentCellViewModel
+        
+        handle(success: success)
     }
     
     private func reversedArrayOfDates(from today: Date, to firstDate: Date) -> [Date] {
