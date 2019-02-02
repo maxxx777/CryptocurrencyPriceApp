@@ -25,5 +25,20 @@ class AppFactory {
         
         return viewController
     }
+    
+    func itemDetailViewController(with date: Date, prices: [Currency: String]) -> ItemDetailViewController {
+        
+        let service = CoindeskServiceImp()
+        let currentPriceIndexListener = CurrentPriceIndexListenerImp()
+        let viewModel = ItemDetailViewModelImp(service: service,
+                                               currentPriceIndexListener: currentPriceIndexListener,
+                                               date: date,
+                                               prices: prices)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ItemDetailViewController") as! ItemDetailViewController
+        
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
 }
 

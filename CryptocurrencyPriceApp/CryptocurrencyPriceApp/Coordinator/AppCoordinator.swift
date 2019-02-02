@@ -29,3 +29,12 @@ class AppCoordinator {
     }
 }
 
+fileprivate extension AppCoordinator {
+    
+    func showDetailScreenWith(date: Date, price: String) {
+        
+        let viewController = factory.itemDetailViewController(with: date, prices: [Currency.defaultCurrency: price])
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
