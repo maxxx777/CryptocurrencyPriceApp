@@ -152,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				75E96C5722050BF700B9B656 /* Classes */,
+				75E96C5522050BF700B9B656 /* Helpers */,
+				75E96C5822050BF800B9B656 /* Model */,
 			);
 			path = Public;
 			sourceTree = "<group>";
