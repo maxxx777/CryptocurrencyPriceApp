@@ -40,7 +40,7 @@ class CoindeskServiceTests: XCTestCase {
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).localizedDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, MockingError.anyError.errorDescription, "error should be thrown correctly")
         }
     }
     
@@ -73,7 +73,7 @@ class CoindeskServiceTests: XCTestCase {
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).errorDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, MockingError.anyError.errorDescription, "error should be thrown correctly")
         }
     }
     
@@ -110,7 +110,7 @@ class CoindeskServiceTests: XCTestCase {
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).errorDescription, MockingError.anyError.localizedDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, MockingError.anyError.errorDescription, "error should be thrown correctly")
         }
     }
     

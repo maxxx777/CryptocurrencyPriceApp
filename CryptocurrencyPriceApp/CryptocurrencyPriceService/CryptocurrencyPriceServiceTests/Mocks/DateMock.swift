@@ -12,12 +12,12 @@ extension Date {
     
     static var dayBeforeYesterday: Date {
         
-        return Date(timeIntervalSinceNow: -2*24*60*60)
+        return Date() - 2*24*60*60
     }
     
     static var yesterday: Date {
         
-        return Date(timeIntervalSinceNow: -1*24*60*60)
+        return Date() - 1*24*60*60
     }
     
     static var today: Date {
@@ -27,11 +27,11 @@ extension Date {
     
     static var tomorrow: Date {
         
-        return Date(timeIntervalSinceNow: 1*24*60*60)
+        return Date() + 1*24*60*60
     }
     
     static var dayAfterTomorrow: Date {
         
-        return Date(timeIntervalSinceNow: 2*24*60*60)
+        return Date() + 2*24*60*60
     }
 }
