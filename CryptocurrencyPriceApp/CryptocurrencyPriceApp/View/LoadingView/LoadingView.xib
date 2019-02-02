@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="CryptocurrencyPriceApp" customModuleProvider="target">
+            <connections>
+                <outlet property="labelText" destination="zAn-Bg-5Ac" id="4vA-Sh-VXn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4Bk-7S-jBy" userLabel="Loading View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nYH-ZX-Zus">
+                    <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-Bg-5Ac">
+                    <rect key="frame" x="20" y="263.5" width="335" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="z4G-JA-QFW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zAn-Bg-5Ac" firstAttribute="leading" secondItem="4Bk-7S-jBy" secondAttribute="leading" constant="20" id="HJD-1j-utu"/>
+                <constraint firstItem="nYH-ZX-Zus" firstAttribute="top" secondItem="zAn-Bg-5Ac" secondAttribute="bottom" constant="20" id="Nxg-XZ-2yQ"/>
+                <constraint firstItem="nYH-ZX-Zus" firstAttribute="centerY" secondItem="4Bk-7S-jBy" secondAttribute="centerY" id="tU2-Qr-x5g"/>
+                <constraint firstItem="nYH-ZX-Zus" firstAttribute="centerX" secondItem="4Bk-7S-jBy" secondAttribute="centerX" id="zQg-bN-wWP"/>
+                <constraint firstAttribute="trailing" secondItem="zAn-Bg-5Ac" secondAttribute="trailing" constant="20" id="zQp-hS-JrH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="HPQ-DT-wxi"/>
+        </view>
+    </objects>
+</document>
