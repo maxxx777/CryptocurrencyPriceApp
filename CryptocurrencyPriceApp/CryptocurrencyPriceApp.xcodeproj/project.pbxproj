@@ -11,6 +11,7 @@
 		7514DD602205BCB3009E1E89 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD5F2205BCB3009E1E89 /* AppFactory.swift */; };
 		7514DD622205BD83009E1E89 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD612205BD83009E1E89 /* ItemListViewController.swift */; };
 		7514DD642205BD9A009E1E89 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD632205BD9A009E1E89 /* ItemListViewModel.swift */; };
+		7514DD6C2205CD82009E1E89 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD6B2205CD82009E1E89 /* NibLoadable.swift */; };
 		75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B6222043FB600B9B656 /* AppDelegate.swift */; };
 		75E96B6822043FB600B9B656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6622043FB600B9B656 /* Main.storyboard */; };
 		75E96B6A22043FB700B9B656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6922043FB700B9B656 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		7514DD5F2205BCB3009E1E89 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		7514DD612205BD83009E1E89 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		7514DD632205BD9A009E1E89 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		7514DD6B2205CD82009E1E89 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		75E96B5F22043FB600B9B656 /* CryptocurrencyPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptocurrencyPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B6222043FB600B9B656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E96B6722043FB600B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7514DD612205BD83009E1E89 /* ItemListViewController.swift */,
+				7514DD6B2205CD82009E1E89 /* NibLoadable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7514DD602205BCB3009E1E89 /* AppFactory.swift in Sources */,
+				7514DD6C2205CD82009E1E89 /* NibLoadable.swift in Sources */,
 				7514DD642205BD9A009E1E89 /* ItemListViewModel.swift in Sources */,
 				7514DD622205BD83009E1E89 /* ItemListViewController.swift in Sources */,
 				7514DD5E2205BC88009E1E89 /* AppCoordinator.swift in Sources */,
