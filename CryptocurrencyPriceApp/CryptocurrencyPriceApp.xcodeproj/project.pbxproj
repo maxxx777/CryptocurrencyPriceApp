@@ -33,6 +33,10 @@
 		7514DDA52206257A009E1E89 /* CompletionHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDA42206257A009E1E89 /* CompletionHandlers.swift */; };
 		7514DDA7220639EC009E1E89 /* ItemListViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDA6220639EC009E1E89 /* ItemListViewActions.swift */; };
 		7514DDA9220647CE009E1E89 /* ItemDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDA8220647CE009E1E89 /* ItemDetailViewModelTests.swift */; };
+		7514DDB122065256009E1E89 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514DDB022065256009E1E89 /* NotificationCenter.framework */; };
+		7514DDB422065256009E1E89 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDB322065256009E1E89 /* TodayViewController.swift */; };
+		7514DDB722065256009E1E89 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7514DDB522065256009E1E89 /* MainInterface.storyboard */; };
+		7514DDBB22065256009E1E89 /* TodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7514DDAF22065256009E1E89 /* TodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B6222043FB600B9B656 /* AppDelegate.swift */; };
 		75E96B6822043FB600B9B656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6622043FB600B9B656 /* Main.storyboard */; };
 		75E96B6A22043FB700B9B656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6922043FB700B9B656 /* Assets.xcassets */; };
@@ -43,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7514DDB922065256009E1E89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75E96B5722043FB600B9B656 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7514DDAE22065256009E1E89;
+			remoteInfo = TodayWidget;
+		};
 		75E96B7422043FB700B9B656 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75E96B5722043FB600B9B656 /* Project object */;
@@ -81,6 +92,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7514DDBF22065256009E1E89 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7514DDBB22065256009E1E89 /* TodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E96BE922044AD100B9B656 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -122,6 +144,11 @@
 		7514DDA42206257A009E1E89 /* CompletionHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlers.swift; sourceTree = "<group>"; };
 		7514DDA6220639EC009E1E89 /* ItemListViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewActions.swift; sourceTree = "<group>"; };
 		7514DDA8220647CE009E1E89 /* ItemDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModelTests.swift; sourceTree = "<group>"; };
+		7514DDAF22065256009E1E89 /* TodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7514DDB022065256009E1E89 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		7514DDB322065256009E1E89 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		7514DDB622065256009E1E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		7514DDB822065256009E1E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E96B5F22043FB600B9B656 /* CryptocurrencyPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptocurrencyPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B6222043FB600B9B656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E96B6722043FB600B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +163,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7514DDAC22065256009E1E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7514DDB122065256009E1E89 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E96B5C22043FB600B9B656 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +302,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		7514DDB222065256009E1E89 /* TodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				7514DDB322065256009E1E89 /* TodayViewController.swift */,
+				7514DDB522065256009E1E89 /* MainInterface.storyboard */,
+				7514DDB822065256009E1E89 /* Info.plist */,
+			);
+			path = TodayWidget;
+			sourceTree = "<group>";
+		};
 		75E96B5622043FB600B9B656 = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +319,7 @@
 				75E96B7622043FB700B9B656 /* CryptocurrencyPriceAppTests */,
 				75E96B8122043FB700B9B656 /* CryptocurrencyPriceAppUITests */,
 				75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */,
+				7514DDB222065256009E1E89 /* TodayWidget */,
 				75E96B6022043FB600B9B656 /* Products */,
 				75E96BE322044AC300B9B656 /* Frameworks */,
 			);
@@ -285,6 +331,7 @@
 				75E96B5F22043FB600B9B656 /* CryptocurrencyPriceApp.app */,
 				75E96B7322043FB700B9B656 /* CryptocurrencyPriceAppTests.xctest */,
 				75E96B7E22043FB700B9B656 /* CryptocurrencyPriceAppUITests.xctest */,
+				7514DDAF22065256009E1E89 /* TodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,6 +385,7 @@
 		75E96BE322044AC300B9B656 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7514DDB022065256009E1E89 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -345,6 +393,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7514DDAE22065256009E1E89 /* TodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7514DDBC22065256009E1E89 /* Build configuration list for PBXNativeTarget "TodayWidget" */;
+			buildPhases = (
+				7514DDAB22065256009E1E89 /* Sources */,
+				7514DDAC22065256009E1E89 /* Frameworks */,
+				7514DDAD22065256009E1E89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayWidget;
+			productName = TodayWidget;
+			productReference = 7514DDAF22065256009E1E89 /* TodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		75E96B5E22043FB600B9B656 /* CryptocurrencyPriceApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E96B8722043FB700B9B656 /* Build configuration list for PBXNativeTarget "CryptocurrencyPriceApp" */;
@@ -353,11 +418,13 @@
 				75E96B5C22043FB600B9B656 /* Frameworks */,
 				75E96B5D22043FB600B9B656 /* Resources */,
 				75E96BE922044AD100B9B656 /* Embed Frameworks */,
+				7514DDBF22065256009E1E89 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				75E96BE822044AD100B9B656 /* PBXTargetDependency */,
+				7514DDBA22065256009E1E89 /* PBXTargetDependency */,
 			);
 			name = CryptocurrencyPriceApp;
 			productName = CryptocurrencyPriceApp;
@@ -410,6 +477,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "MAXIM TSVETKOV";
 				TargetAttributes = {
+					7514DDAE22065256009E1E89 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					75E96B5E22043FB600B9B656 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -445,6 +515,7 @@
 				75E96B5E22043FB600B9B656 /* CryptocurrencyPriceApp */,
 				75E96B7222043FB700B9B656 /* CryptocurrencyPriceAppTests */,
 				75E96B7D22043FB700B9B656 /* CryptocurrencyPriceAppUITests */,
+				7514DDAE22065256009E1E89 /* TodayWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -467,6 +538,14 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7514DDAD22065256009E1E89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7514DDB722065256009E1E89 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E96B5D22043FB600B9B656 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,6 +578,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7514DDAB22065256009E1E89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7514DDB422065256009E1E89 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E96B5B22043FB600B9B656 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -546,6 +633,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7514DDBA22065256009E1E89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7514DDAE22065256009E1E89 /* TodayWidget */;
+			targetProxy = 7514DDB922065256009E1E89 /* PBXContainerItemProxy */;
+		};
 		75E96B7522043FB700B9B656 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 75E96B5E22043FB600B9B656 /* CryptocurrencyPriceApp */;
@@ -564,6 +656,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7514DDB522065256009E1E89 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7514DDB622065256009E1E89 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		75E96B6622043FB600B9B656 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -583,6 +683,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7514DDBD22065256009E1E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maxxx.CryptocurrencyPriceApp.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7514DDBE22065256009E1E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maxxx.CryptocurrencyPriceApp.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		75E96B8522043FB700B9B656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -816,6 +952,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7514DDBC22065256009E1E89 /* Build configuration list for PBXNativeTarget "TodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7514DDBD22065256009E1E89 /* Debug */,
+				7514DDBE22065256009E1E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		75E96B5A22043FB600B9B656 /* Build configuration list for PBXProject "CryptocurrencyPriceApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
