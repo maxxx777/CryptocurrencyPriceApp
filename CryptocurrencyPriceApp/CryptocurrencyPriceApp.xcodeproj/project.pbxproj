@@ -18,11 +18,18 @@
 		7514DD702205D398009E1E89 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7514DD6F2205D398009E1E89 /* LoadingView.xib */; };
 		7514DD732205DC0C009E1E89 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD722205DC0C009E1E89 /* Constants.swift */; };
 		7514DD752205E124009E1E89 /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD742205E124009E1E89 /* ItemCellViewModel.swift */; };
+		7514DD8922060641009E1E89 /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD8322060641009E1E89 /* ItemListViewModelTests.swift */; };
+		7514DD8E2206067C009E1E89 /* CoindeskServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD8D2206067C009E1E89 /* CoindeskServiceMock.swift */; };
+		7514DD9422060729009E1E89 /* CurrentPriceIndexListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9322060729009E1E89 /* CurrentPriceIndexListenerMock.swift */; };
+		7514DD9822060A49009E1E89 /* HistoricalPriceIndexStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 7514DD9522060A49009E1E89 /* HistoricalPriceIndexStubbedResponse.json */; };
+		7514DD9922060A49009E1E89 /* CurrentPriceIndexStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 7514DD9622060A49009E1E89 /* CurrentPriceIndexStubbedResponse.json */; };
+		7514DD9A22060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 7514DD9722060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json */; };
+		7514DD9C22060AEB009E1E89 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9B22060AEB009E1E89 /* Stubs.swift */; };
+		7514DD9F22061C2A009E1E89 /* MockingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9E22061C2A009E1E89 /* MockingError.swift */; };
 		75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B6222043FB600B9B656 /* AppDelegate.swift */; };
 		75E96B6822043FB600B9B656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6622043FB600B9B656 /* Main.storyboard */; };
 		75E96B6A22043FB700B9B656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6922043FB700B9B656 /* Assets.xcassets */; };
 		75E96B6D22043FB700B9B656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6B22043FB700B9B656 /* LaunchScreen.storyboard */; };
-		75E96B7822043FB700B9B656 /* CryptocurrencyPriceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B7722043FB700B9B656 /* CryptocurrencyPriceAppTests.swift */; };
 		75E96B8322043FB700B9B656 /* CryptocurrencyPriceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B8222043FB700B9B656 /* CryptocurrencyPriceAppUITests.swift */; };
 		75E96BE422044AC300B9B656 /* CryptocurrencyPriceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96BBA2204415100B9B656 /* CryptocurrencyPriceService.framework */; };
 		75E96BE622044AD100B9B656 /* CryptocurrencyPriceService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96BBA2204415100B9B656 /* CryptocurrencyPriceService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +99,15 @@
 		7514DD6F2205D398009E1E89 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		7514DD722205DC0C009E1E89 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7514DD742205E124009E1E89 /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
+		7514DD8022060641009E1E89 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7514DD8322060641009E1E89 /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
+		7514DD8D2206067C009E1E89 /* CoindeskServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindeskServiceMock.swift; sourceTree = "<group>"; };
+		7514DD9322060729009E1E89 /* CurrentPriceIndexListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPriceIndexListenerMock.swift; sourceTree = "<group>"; };
+		7514DD9522060A49009E1E89 /* HistoricalPriceIndexStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HistoricalPriceIndexStubbedResponse.json; sourceTree = "<group>"; };
+		7514DD9622060A49009E1E89 /* CurrentPriceIndexStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurrentPriceIndexStubbedResponse.json; sourceTree = "<group>"; };
+		7514DD9722060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HistoricalPriceIndexRangeStubbedResponse.json; sourceTree = "<group>"; };
+		7514DD9B22060AEB009E1E89 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		7514DD9E22061C2A009E1E89 /* MockingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingError.swift; sourceTree = "<group>"; };
 		75E96B5F22043FB600B9B656 /* CryptocurrencyPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptocurrencyPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B6222043FB600B9B656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E96B6722043FB600B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,8 +115,6 @@
 		75E96B6C22043FB700B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75E96B6E22043FB700B9B656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E96B7322043FB700B9B656 /* CryptocurrencyPriceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptocurrencyPriceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75E96B7722043FB700B9B656 /* CryptocurrencyPriceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyPriceAppTests.swift; sourceTree = "<group>"; };
-		75E96B7922043FB700B9B656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E96B7E22043FB700B9B656 /* CryptocurrencyPriceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptocurrencyPriceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B8222043FB700B9B656 /* CryptocurrencyPriceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyPriceAppUITests.swift; sourceTree = "<group>"; };
 		75E96B8422043FB700B9B656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,6 +202,50 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		7514DD7F22060641009E1E89 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD8022060641009E1E89 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		7514DD8122060641009E1E89 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD8D2206067C009E1E89 /* CoindeskServiceMock.swift */,
+				7514DD9322060729009E1E89 /* CurrentPriceIndexListenerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7514DD8222060641009E1E89 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD8322060641009E1E89 /* ItemListViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		7514DD8422060641009E1E89 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD9622060A49009E1E89 /* CurrentPriceIndexStubbedResponse.json */,
+				7514DD9722060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json */,
+				7514DD9522060A49009E1E89 /* HistoricalPriceIndexStubbedResponse.json */,
+				7514DD9B22060AEB009E1E89 /* Stubs.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		7514DD9D22061C1C009E1E89 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD9E22061C2A009E1E89 /* MockingError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		75E96B5622043FB600B9B656 = {
 			isa = PBXGroup;
 			children = (
@@ -229,8 +287,11 @@
 		75E96B7622043FB700B9B656 /* CryptocurrencyPriceAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				75E96B7722043FB700B9B656 /* CryptocurrencyPriceAppTests.swift */,
-				75E96B7922043FB700B9B656 /* Info.plist */,
+				7514DD9D22061C1C009E1E89 /* Helpers */,
+				7514DD8122060641009E1E89 /* Mocks */,
+				7514DD8422060641009E1E89 /* Stubs */,
+				7514DD7F22060641009E1E89 /* Support Files */,
+				7514DD8222060641009E1E89 /* Tests */,
 			);
 			path = CryptocurrencyPriceAppTests;
 			sourceTree = "<group>";
@@ -401,6 +462,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7514DD9822060A49009E1E89 /* HistoricalPriceIndexStubbedResponse.json in Resources */,
+				7514DD9922060A49009E1E89 /* CurrentPriceIndexStubbedResponse.json in Resources */,
+				7514DD9A22060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +499,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E96B7822043FB700B9B656 /* CryptocurrencyPriceAppTests.swift in Sources */,
+				7514DD9F22061C2A009E1E89 /* MockingError.swift in Sources */,
+				7514DD8922060641009E1E89 /* ItemListViewModelTests.swift in Sources */,
+				7514DD9422060729009E1E89 /* CurrentPriceIndexListenerMock.swift in Sources */,
+				7514DD8E2206067C009E1E89 /* CoindeskServiceMock.swift in Sources */,
+				7514DD9C22060AEB009E1E89 /* Stubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +713,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CryptocurrencyPriceAppTests/Info.plist;
+				INFOPLIST_FILE = "CryptocurrencyPriceAppTests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,7 +733,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CryptocurrencyPriceAppTests/Info.plist;
+				INFOPLIST_FILE = "CryptocurrencyPriceAppTests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
