@@ -20,3 +20,5 @@ public extension Currency {
 }
 
 extension Currency: Decodable {}
+
+extension Currency: CaseIterable {}
