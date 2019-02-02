@@ -14,10 +14,10 @@ class DateExtensionTests: XCTestCase {
     func testCorrectParameterValue() {
         
         //Given
-        let date = Date(timeIntervalSince1970: 0)
+        let date = Date(timeIntervalSince1970: 1549017910.8756309)
         
         //Then
-        XCTAssertEqual(date.parameterValue, "1970-01-01", "Date has wrong parameter value")
+        XCTAssertEqual(date.parameterValue, "2019-02-01", "Date has wrong parameter value")
     }
     
     func testIsPastDayTrue() {

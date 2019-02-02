@@ -13,7 +13,7 @@ extension Date {
     var parameterValue: String {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-DD"
+        dateFormatter.dateFormat = "YYYY-MM-dd"
         
         return dateFormatter.string(from: self)
     }
