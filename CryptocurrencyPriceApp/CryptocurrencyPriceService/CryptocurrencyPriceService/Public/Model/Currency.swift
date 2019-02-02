@@ -8,13 +8,15 @@
 
 import Foundation
 
-enum Currency: String, Decodable {
+public enum Currency: String {
     case USD, GBP, EUR
 }
 
-extension Currency {
+public extension Currency {
     
     static var defaultCurrency: Currency {
         return .EUR
     }
 }
+
+extension Currency: Decodable {}

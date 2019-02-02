@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct HistoricalPriceIndex: Decodable {
+public struct HistoricalPriceIndex {
     
     fileprivate let bpi: [String: Float]
 }
 
-extension HistoricalPriceIndex {
+public extension HistoricalPriceIndex {
     
     subscript(date: Date) -> String? {
         
@@ -33,3 +33,5 @@ extension HistoricalPriceIndex {
         }        
     }
 }
+
+extension HistoricalPriceIndex: Decodable {}

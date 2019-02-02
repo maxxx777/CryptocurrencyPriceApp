@@ -8,19 +8,16 @@
 
 import Foundation
 
-fileprivate struct CurrencyDetails: Decodable {
-    
-    let rate: String
-}
-
-struct CurrentPriceIndex: Decodable {
+public struct CurrentPriceIndex {
 
     private let bpi: [Currency.RawValue: CurrencyDetails]
 }
 
-extension CurrentPriceIndex {
+public extension CurrentPriceIndex {
     
     subscript(currency: Currency) -> String? {
         return bpi[currency.rawValue]?.rate
     }
 }
+
+extension CurrentPriceIndex: Decodable {}
