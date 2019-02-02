@@ -28,6 +28,7 @@
 		7514DD9A22060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 7514DD9722060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json */; };
 		7514DD9C22060AEB009E1E89 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9B22060AEB009E1E89 /* Stubs.swift */; };
 		7514DD9F22061C2A009E1E89 /* MockingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9E22061C2A009E1E89 /* MockingError.swift */; };
+		7514DDA52206257A009E1E89 /* CompletionHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDA42206257A009E1E89 /* CompletionHandlers.swift */; };
 		75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B6222043FB600B9B656 /* AppDelegate.swift */; };
 		75E96B6822043FB600B9B656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6622043FB600B9B656 /* Main.storyboard */; };
 		75E96B6A22043FB700B9B656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6922043FB700B9B656 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		7514DD9722060A49009E1E89 /* HistoricalPriceIndexRangeStubbedResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HistoricalPriceIndexRangeStubbedResponse.json; sourceTree = "<group>"; };
 		7514DD9B22060AEB009E1E89 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		7514DD9E22061C2A009E1E89 /* MockingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingError.swift; sourceTree = "<group>"; };
+		7514DDA42206257A009E1E89 /* CompletionHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlers.swift; sourceTree = "<group>"; };
 		75E96B5F22043FB600B9B656 /* CryptocurrencyPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptocurrencyPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B6222043FB600B9B656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E96B6722043FB600B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				7514DD632205BD9A009E1E89 /* ItemListViewModel.swift */,
 				7514DD742205E124009E1E89 /* ItemCellViewModel.swift */,
+				7514DDA42206257A009E1E89 /* CompletionHandlers.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			files = (
 				7514DD602205BCB3009E1E89 /* AppFactory.swift in Sources */,
 				7514DD682205C65E009E1E89 /* ErrorView.swift in Sources */,
+				7514DDA52206257A009E1E89 /* CompletionHandlers.swift in Sources */,
 				7514DD7C2205F6FA009E1E89 /* ViewState.swift in Sources */,
 				7514DD6C2205CD82009E1E89 /* NibLoadable.swift in Sources */,
 				7514DD642205BD9A009E1E89 /* ItemListViewModel.swift in Sources */,

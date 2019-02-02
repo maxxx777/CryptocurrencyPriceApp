@@ -9,9 +9,6 @@
 import Foundation
 import CryptocurrencyPriceService
 
-typealias SuccessCompletion = (() -> Void)
-typealias FailureCompletion = ((String) -> Void)
-
 protocol ItemListViewModel {
     
     func fetchData(success: SuccessCompletion?, failure: FailureCompletion?)
