@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ItemListViewActions: class {
-    var didSelectItem: ((Date, Currency, String) -> Void)? { get set }
+    var didSelectItem: ((Date, String) -> Void)? { get set }
 }
