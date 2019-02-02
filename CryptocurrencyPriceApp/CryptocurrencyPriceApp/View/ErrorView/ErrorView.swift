@@ -12,6 +12,7 @@ import UIKit
 
 class ErrorView: UIView {
 
+    @IBOutlet weak var labelTitle: UILabel?
     @IBOutlet weak var buttonRetry: UIButton?
     @IBOutlet weak var labelText: UILabel?
 
@@ -33,5 +34,8 @@ private extension ErrorView {
     func configureView() {
         
         setupViewFromNib()
+        
+        labelTitle?.text = "Error"
+        buttonRetry?.setTitle("Retry", for: [])
     }
 }

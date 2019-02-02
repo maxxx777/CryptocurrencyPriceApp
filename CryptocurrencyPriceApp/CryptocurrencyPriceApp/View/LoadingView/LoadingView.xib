@@ -28,7 +28,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="z4G-JA-QFW"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
