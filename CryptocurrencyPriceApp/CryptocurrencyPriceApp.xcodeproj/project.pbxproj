@@ -18,6 +18,7 @@
 		7514DD702205D398009E1E89 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7514DD6F2205D398009E1E89 /* LoadingView.xib */; };
 		7514DD732205DC0C009E1E89 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD722205DC0C009E1E89 /* Constants.swift */; };
 		7514DD752205E124009E1E89 /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD742205E124009E1E89 /* ItemCellViewModel.swift */; };
+		7514DD7A2205F2A0009E1E89 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD792205F2A0009E1E89 /* ItemTableViewCell.swift */; };
 		7514DD8922060641009E1E89 /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD8322060641009E1E89 /* ItemListViewModelTests.swift */; };
 		7514DD8E2206067C009E1E89 /* CoindeskServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD8D2206067C009E1E89 /* CoindeskServiceMock.swift */; };
 		7514DD9422060729009E1E89 /* CurrentPriceIndexListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9322060729009E1E89 /* CurrentPriceIndexListenerMock.swift */; };
@@ -99,6 +100,7 @@
 		7514DD6F2205D398009E1E89 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		7514DD722205DC0C009E1E89 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7514DD742205E124009E1E89 /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
+		7514DD792205F2A0009E1E89 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		7514DD8022060641009E1E89 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7514DD8322060641009E1E89 /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
 		7514DD8D2206067C009E1E89 /* CoindeskServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindeskServiceMock.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				7514DD652205C646009E1E89 /* ErrorView */,
 				7514DD662205C646009E1E89 /* LoadingView */,
 				7514DD612205BD83009E1E89 /* ItemListViewController.swift */,
+				7514DD792205F2A0009E1E89 /* ItemTableViewCell.swift */,
 				7514DD6B2205CD82009E1E89 /* NibLoadable.swift */,
 			);
 			path = View;
@@ -491,6 +494,7 @@
 				7514DD5E2205BC88009E1E89 /* AppCoordinator.swift in Sources */,
 				75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */,
 				7514DD732205DC0C009E1E89 /* Constants.swift in Sources */,
+				7514DD7A2205F2A0009E1E89 /* ItemTableViewCell.swift in Sources */,
 				7514DD752205E124009E1E89 /* ItemCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
