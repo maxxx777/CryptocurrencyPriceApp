@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34d-E1-k7g" userLabel="Error View" customClass="ErrorView" customModule="CryptocurrencyPriceApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-Fi-uLi" userLabel="Loading View" customClass="LoadingView" customModule="CryptocurrencyPriceApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRU-0T-Dzr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellId" textLabel="Fzl-iq-Baq" detailTextLabel="hFM-RD-yYi" style="IBUITableViewCellStyleValue1" id="mhM-f9-G9O" customClass="ItemTableViewCell" customModule="CryptocurrencyPriceApp" customModuleProvider="target">
@@ -68,9 +68,9 @@
                             <constraint firstItem="JRU-0T-Dzr" firstAttribute="leading" secondItem="GAb-LP-vrg" secondAttribute="leading" id="BWE-xx-sda"/>
                             <constraint firstItem="JRU-0T-Dzr" firstAttribute="trailing" secondItem="GAb-LP-vrg" secondAttribute="trailing" id="FMp-dK-PuM"/>
                             <constraint firstItem="34d-E1-k7g" firstAttribute="bottom" secondItem="GAb-LP-vrg" secondAttribute="bottom" id="HkF-pR-3zA"/>
-                            <constraint firstItem="JRU-0T-Dzr" firstAttribute="top" secondItem="7Jo-H1-M3h" secondAttribute="top" id="UGv-FT-8oV"/>
-                            <constraint firstItem="34d-E1-k7g" firstAttribute="top" secondItem="7Jo-H1-M3h" secondAttribute="top" id="XGM-iA-bjP"/>
-                            <constraint firstItem="VNF-Fi-uLi" firstAttribute="top" secondItem="7Jo-H1-M3h" secondAttribute="top" id="feg-Qn-H7z"/>
+                            <constraint firstItem="JRU-0T-Dzr" firstAttribute="top" secondItem="GAb-LP-vrg" secondAttribute="top" id="UGv-FT-8oV"/>
+                            <constraint firstItem="34d-E1-k7g" firstAttribute="top" secondItem="GAb-LP-vrg" secondAttribute="top" id="XGM-iA-bjP"/>
+                            <constraint firstItem="VNF-Fi-uLi" firstAttribute="top" secondItem="GAb-LP-vrg" secondAttribute="top" id="feg-Qn-H7z"/>
                             <constraint firstItem="VNF-Fi-uLi" firstAttribute="leading" secondItem="GAb-LP-vrg" secondAttribute="leading" id="gpl-vj-OcZ"/>
                             <constraint firstItem="VNF-Fi-uLi" firstAttribute="bottom" secondItem="GAb-LP-vrg" secondAttribute="bottom" id="lua-WN-E0u"/>
                             <constraint firstItem="34d-E1-k7g" firstAttribute="leading" secondItem="GAb-LP-vrg" secondAttribute="leading" id="po9-BO-6UP"/>
