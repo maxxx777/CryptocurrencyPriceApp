@@ -8,40 +8,37 @@
 
 import Foundation
 
-typealias Success<T> = ((T) -> Void)?
-typealias Failure = ((Error) -> Void)?
-
-protocol CoindeskService {
+public protocol CoindeskService {
     
     // fetch current price index for specific currency
-    func fetchCurrentPriceIndex(in currency: Currency?, success: Success<CurrentPriceIndex>, failure: Failure)
+    func fetchCurrentPriceIndex(in currency: Currency?, success: Success<CurrentPriceIndex>?, failure: Failure?)
     
     // fetch historical price index for specific date and in specific currency
-    func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure)
+    func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>?, failure: Failure?)
     
     // fetch historical price index for specific range of dates and in specific currency
-    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure)
+    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>?, failure: Failure?)
 }
 
-extension CoindeskService {
+public extension CoindeskService {
     
     // fetch current price index for EUR, USD, GBP
-    func fetchCurrentPriceIndex(success: Success<CurrentPriceIndex>, failure: Failure) {
+    func fetchCurrentPriceIndex(success: Success<CurrentPriceIndex>?, failure: Failure?) {
         fetchCurrentPriceIndex(in: nil, success: success, failure: failure)
     }
     
     // fetch historical price index for specific date and in default currency
-    func fetchHistoricalPriceIndex(for date: Date, success: Success<HistoricalPriceIndex>, failure: Failure) {
+    func fetchHistoricalPriceIndex(for date: Date, success: Success<HistoricalPriceIndex>?, failure: Failure?) {
         fetchHistoricalPriceIndex(for: date, in: Currency.defaultCurrency, success: success, failure: failure)
     }
     
     // fetch historical price index for specific range of dates and in specific currency
-    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, success: Success<HistoricalPriceIndex>, failure: Failure) {
+    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, success: Success<HistoricalPriceIndex>?, failure: Failure?) {
         fetchHistoricalPriceIndex(between: startDate, and: endDate, in: Currency.defaultCurrency, success: success, failure: failure)
     }
 }
 
-class CoindeskServiceImp {
+public class CoindeskServiceImp {
     
     fileprivate var networking: Networking
     
@@ -56,6 +53,10 @@ class CoindeskServiceImp {
         }
     }
     
+    public init() {
+        self.networking = NetworkingImp()
+    }
+    
     init(networking: Networking) {
         self.networking = networking
     }
@@ -63,7 +64,7 @@ class CoindeskServiceImp {
 
 extension CoindeskServiceImp: CoindeskService {
     
-    func fetchCurrentPriceIndex(in currency: Currency?,
+    public func fetchCurrentPriceIndex(in currency: Currency?,
                                 success: ((CurrentPriceIndex) -> Void)?,
                                 failure: ((Error) -> Void)?) {
         
@@ -72,11 +73,11 @@ extension CoindeskServiceImp: CoindeskService {
         call(endpoint, success: success, failure: failure)
     }
     
-    func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
+    public func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>?, failure: Failure?) {
         
         //add client checking, as coindesk remote api returns error if date is equal or more than today
         guard date.isPastDay else {
-            failure?(Errors.wrongDateParameter)            
+            handle(error: Errors.wrongDateParameter, into: failure)
             return
         }
         
@@ -85,11 +86,11 @@ extension CoindeskServiceImp: CoindeskService {
         call(endpoint, success: success, failure: failure)
     }
     
-    func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>, failure: Failure) {
+    public func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>?, failure: Failure?) {
         
         //add client checking, as coindesk remote api returns error either if date is equal or more than today, or start date more than end date
         guard startDate.isPastDay && endDate.isFutureDay(after: startDate) else {
-            failure?(Errors.wrongDateParameter)
+            handle(error: Errors.wrongDateParameter, into: failure)
             return
         }
         
@@ -101,29 +102,43 @@ extension CoindeskServiceImp: CoindeskService {
 
 fileprivate extension CoindeskServiceImp {
     
-    func call<T: Decodable>(_ endpoint: Endpoint, success: Success<T>, failure: Failure) {
+    func call<T: Decodable>(_ endpoint: Endpoint, success: Success<T>?, failure: Failure?) {
         
         networking.call(endpoint) { [weak self] result in
             
             switch result {
             case let .success(data):
                 
-                self?.handleSuccess(result: data, into: success, or: failure)
+                self?.decode(result: data, into: success, or: failure)
                 
             case let .failure(error):
                 
-                failure?(error)
+                self?.handle(error: error, into: failure)
             }
         }
     }
     
-    func handleSuccess<T: Decodable>(result data: Data, into success: Success<T>, or failure: Failure) {
+    func decode<T: Decodable>(result data: Data, into success: Success<T>?, or failure: Failure?) {
         
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
-            success?(result)
+            handle(result: result, into: success)
         } catch let jsonDecodingError {
-            failure?(jsonDecodingError)
+            handle(error: jsonDecodingError, into: failure)
+        }
+    }
+    
+    func handle<T: Decodable>(result:T, into success: Success<T>?) {
+        
+        DispatchQueue.main.async {
+            success?(result)
+        }
+    }
+    
+    func handle(error:Error, into failure: Failure?) {
+        
+        DispatchQueue.main.async {
+            failure?(error)
         }
     }
 }
