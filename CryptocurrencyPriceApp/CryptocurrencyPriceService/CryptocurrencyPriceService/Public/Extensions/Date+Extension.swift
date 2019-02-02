@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     
     var parameterValue: String {
         
@@ -19,7 +19,7 @@ extension Date {
     }
 }
 
-extension Date {
+public extension Date {
     
     var isPastDay: Bool {
         
