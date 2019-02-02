@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7514DD5E2205BC88009E1E89 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD5D2205BC88009E1E89 /* AppCoordinator.swift */; };
+		7514DD602205BCB3009E1E89 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD5F2205BCB3009E1E89 /* AppFactory.swift */; };
+		7514DD622205BD83009E1E89 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD612205BD83009E1E89 /* ItemListViewController.swift */; };
+		7514DD642205BD9A009E1E89 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD632205BD9A009E1E89 /* ItemListViewModel.swift */; };
 		75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B6222043FB600B9B656 /* AppDelegate.swift */; };
-		75E96B6522043FB600B9B656 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B6422043FB600B9B656 /* ViewController.swift */; };
 		75E96B6822043FB600B9B656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6622043FB600B9B656 /* Main.storyboard */; };
 		75E96B6A22043FB700B9B656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6922043FB700B9B656 /* Assets.xcassets */; };
 		75E96B6D22043FB700B9B656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6B22043FB700B9B656 /* LaunchScreen.storyboard */; };
 		75E96B7822043FB700B9B656 /* CryptocurrencyPriceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B7722043FB700B9B656 /* CryptocurrencyPriceAppTests.swift */; };
 		75E96B8322043FB700B9B656 /* CryptocurrencyPriceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B8222043FB700B9B656 /* CryptocurrencyPriceAppUITests.swift */; };
+		75E96BE422044AC300B9B656 /* CryptocurrencyPriceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96BBA2204415100B9B656 /* CryptocurrencyPriceService.framework */; };
+		75E96BE622044AD100B9B656 /* CryptocurrencyPriceService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96BBA2204415100B9B656 /* CryptocurrencyPriceService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +50,36 @@
 			remoteGlobalIDString = 75E96BA32204414F00B9B656;
 			remoteInfo = CryptocurrencyPriceServiceTests;
 		};
+		75E96BE722044AD100B9B656 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 75E96B992204414F00B9B656;
+			remoteInfo = CryptocurrencyPriceService;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		75E96BE922044AD100B9B656 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				75E96BE622044AD100B9B656 /* CryptocurrencyPriceService.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7514DD5D2205BC88009E1E89 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7514DD5F2205BCB3009E1E89 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		7514DD612205BD83009E1E89 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		7514DD632205BD9A009E1E89 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		75E96B5F22043FB600B9B656 /* CryptocurrencyPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptocurrencyPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B6222043FB600B9B656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75E96B6422043FB600B9B656 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75E96B6722043FB600B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75E96B6922043FB700B9B656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75E96B6C22043FB700B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E96BE422044AC300B9B656 /* CryptocurrencyPriceService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +119,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7514DD592205BC52009E1E89 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD632205BD9A009E1E89 /* ItemListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7514DD5B2205BC52009E1E89 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD5D2205BC88009E1E89 /* AppCoordinator.swift */,
+				7514DD5F2205BCB3009E1E89 /* AppFactory.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7514DD5C2205BC52009E1E89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7514DD612205BD83009E1E89 /* ItemListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		75E96B5622043FB600B9B656 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +152,7 @@
 				75E96B8122043FB700B9B656 /* CryptocurrencyPriceAppUITests */,
 				75E96BB42204414F00B9B656 /* CryptocurrencyPriceService.xcodeproj */,
 				75E96B6022043FB600B9B656 /* Products */,
+				75E96BE322044AC300B9B656 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				75E96B6222043FB600B9B656 /* AppDelegate.swift */,
-				75E96B6422043FB600B9B656 /* ViewController.swift */,
+				7514DD5B2205BC52009E1E89 /* Coordinator */,
+				7514DD5C2205BC52009E1E89 /* View */,
+				7514DD592205BC52009E1E89 /* ViewModel */,
 				75E96B6622043FB600B9B656 /* Main.storyboard */,
 				75E96B6922043FB700B9B656 /* Assets.xcassets */,
 				75E96B6B22043FB700B9B656 /* LaunchScreen.storyboard */,
@@ -150,6 +208,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		75E96BE322044AC300B9B656 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,10 +225,12 @@
 				75E96B5B22043FB600B9B656 /* Sources */,
 				75E96B5C22043FB600B9B656 /* Frameworks */,
 				75E96B5D22043FB600B9B656 /* Resources */,
+				75E96BE922044AD100B9B656 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				75E96BE822044AD100B9B656 /* PBXTargetDependency */,
 			);
 			name = CryptocurrencyPriceApp;
 			productName = CryptocurrencyPriceApp;
@@ -304,7 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E96B6522043FB600B9B656 /* ViewController.swift in Sources */,
+				7514DD602205BCB3009E1E89 /* AppFactory.swift in Sources */,
+				7514DD642205BD9A009E1E89 /* ItemListViewModel.swift in Sources */,
+				7514DD622205BD83009E1E89 /* ItemListViewController.swift in Sources */,
+				7514DD5E2205BC88009E1E89 /* AppCoordinator.swift in Sources */,
 				75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +407,11 @@
 			isa = PBXTargetDependency;
 			target = 75E96B5E22043FB600B9B656 /* CryptocurrencyPriceApp */;
 			targetProxy = 75E96B7F22043FB700B9B656 /* PBXContainerItemProxy */;
+		};
+		75E96BE822044AD100B9B656 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptocurrencyPriceService;
+			targetProxy = 75E96BE722044AD100B9B656 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -479,6 +554,7 @@
 		75E96B8822043FB700B9B656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CryptocurrencyPriceApp/Info.plist;
@@ -496,6 +572,7 @@
 		75E96B8922043FB700B9B656 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CryptocurrencyPriceApp/Info.plist;
