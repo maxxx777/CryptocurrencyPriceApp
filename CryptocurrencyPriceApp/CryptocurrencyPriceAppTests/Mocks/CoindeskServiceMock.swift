@@ -40,6 +40,13 @@ class CoindeskServiceMock: CoindeskService {
     
     func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: ((HistoricalPriceIndex) -> ())?, failure: Failure?) {
         
+        switch result {        
+        case .error(let error):
+            failure?(error)
+        default:
+            success?(Stubs.historicalPriceIndexOneDayStub())
+        }
+        
     }
     
     func fetchCurrentPriceIndex(in currency: Currency?,

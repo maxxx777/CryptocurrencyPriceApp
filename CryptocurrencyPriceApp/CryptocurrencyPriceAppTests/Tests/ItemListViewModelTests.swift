@@ -18,7 +18,7 @@ class ItemListViewModelTests: XCTestCase {
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
-                                             today: todayStub(),
+                                             today: Stubs.todayStub(),
                                              numberOfDays: 14)
         
         viewModel.fetchData(success: {
@@ -47,7 +47,7 @@ class ItemListViewModelTests: XCTestCase {
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
-                                             today: todayStub(),
+                                             today: Stubs.todayStub(),
                                              numberOfDays: 14)
         
         viewModel.fetchData(success: nil) { (errorText) in
@@ -65,7 +65,7 @@ class ItemListViewModelTests: XCTestCase {
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
-                                             today: todayStub(),
+                                             today: Stubs.todayStub(),
                                              numberOfDays: 14)
         
         viewModel.fetchData(success: nil) { (errorText) in
@@ -83,7 +83,7 @@ class ItemListViewModelTests: XCTestCase {
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
-                                             today: todayStub(),
+                                             today: Stubs.todayStub(),
                                              numberOfDays: 14)
         
         viewModel.fetchData(success: nil) { (errorText) in
@@ -101,7 +101,7 @@ class ItemListViewModelTests: XCTestCase {
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
-                                             today: todayStub(),
+                                             today: Stubs.todayStub(),
                                              numberOfDays: 14)
         
         viewModel.fetchData(success: {
@@ -133,7 +133,7 @@ class ItemListViewModelTests: XCTestCase {
         let listener = CurrentPriceIndexListenerMock(result: .error(MockingError.anyError))
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
-                                             today: todayStub(),
+                                             today: Stubs.todayStub(),
                                              numberOfDays: 14)
         
         viewModel.fetchData(success: {
@@ -154,16 +154,4 @@ class ItemListViewModelTests: XCTestCase {
     // - listen current price index returns multiple callbacks in intervals
     // - listen current price index stops returns callbacks if finish method called
     // - listen current price index method is called before fetch data method called
-}
-
-extension ItemListViewModelTests {
-    
-    func todayStub() -> Date {
-        
-        let stringDate = "2019-01-20"
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd"
-        
-        return dateFormatter.date(from: stringDate)!
-    }
 }
