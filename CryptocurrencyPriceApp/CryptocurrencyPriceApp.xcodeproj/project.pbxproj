@@ -29,6 +29,7 @@
 		7514DD9C22060AEB009E1E89 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9B22060AEB009E1E89 /* Stubs.swift */; };
 		7514DD9F22061C2A009E1E89 /* MockingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD9E22061C2A009E1E89 /* MockingError.swift */; };
 		7514DDA52206257A009E1E89 /* CompletionHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDA42206257A009E1E89 /* CompletionHandlers.swift */; };
+		7514DDA7220639EC009E1E89 /* ItemListViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDA6220639EC009E1E89 /* ItemListViewActions.swift */; };
 		75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96B6222043FB600B9B656 /* AppDelegate.swift */; };
 		75E96B6822043FB600B9B656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6622043FB600B9B656 /* Main.storyboard */; };
 		75E96B6A22043FB700B9B656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E96B6922043FB700B9B656 /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 		7514DD9B22060AEB009E1E89 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		7514DD9E22061C2A009E1E89 /* MockingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingError.swift; sourceTree = "<group>"; };
 		7514DDA42206257A009E1E89 /* CompletionHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlers.swift; sourceTree = "<group>"; };
+		7514DDA6220639EC009E1E89 /* ItemListViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewActions.swift; sourceTree = "<group>"; };
 		75E96B5F22043FB600B9B656 /* CryptocurrencyPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptocurrencyPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96B6222043FB600B9B656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E96B6722043FB600B9B656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				7514DD652205C646009E1E89 /* ErrorView */,
 				7514DD662205C646009E1E89 /* LoadingView */,
 				7514DD612205BD83009E1E89 /* ItemListViewController.swift */,
+				7514DDA6220639EC009E1E89 /* ItemListViewActions.swift */,
 				7514DD792205F2A0009E1E89 /* ItemTableViewCell.swift */,
 				7514DD6B2205CD82009E1E89 /* NibLoadable.swift */,
 				7514DD7B2205F6FA009E1E89 /* ViewState.swift */,
@@ -502,6 +505,7 @@
 				7514DD5E2205BC88009E1E89 /* AppCoordinator.swift in Sources */,
 				75E96B6322043FB600B9B656 /* AppDelegate.swift in Sources */,
 				7514DD732205DC0C009E1E89 /* Constants.swift in Sources */,
+				7514DDA7220639EC009E1E89 /* ItemListViewActions.swift in Sources */,
 				7514DD7A2205F2A0009E1E89 /* ItemTableViewCell.swift in Sources */,
 				7514DD752205E124009E1E89 /* ItemCellViewModel.swift in Sources */,
 			);

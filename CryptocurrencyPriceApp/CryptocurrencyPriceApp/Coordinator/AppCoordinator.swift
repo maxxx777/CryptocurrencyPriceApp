@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CryptocurrencyPriceService
 
 class AppCoordinator {
     
@@ -21,6 +22,9 @@ class AppCoordinator {
     func start() {
         
         let viewController = factory.itemListViewController()
+        viewController.didSelectItem = { [weak self] (date, price) in
+            self?.showDetailScreenWith(date: date, price: price)
+        }
         navigationController.pushViewController(viewController, animated: true)
     }
 }

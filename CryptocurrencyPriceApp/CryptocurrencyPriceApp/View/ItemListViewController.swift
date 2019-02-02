@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ItemListViewController: UIViewController {
-
+class ItemListViewController: UIViewController, ItemListViewActions {
+    
     //dependencies
     //dependencies property is force unwrapped because we are sure factory will provide that
     var viewModel: ItemListViewModel!
@@ -18,6 +18,9 @@ class ItemListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var errorView: ErrorView?
     @IBOutlet weak var loadingView: LoadingView?
+    
+    //ItemListViewActions
+    var didSelectItem: ((Date, String) -> Void)?
     
     //Constants
     fileprivate let CellReuseIdentifier = "CellId"
@@ -100,6 +103,11 @@ extension ItemListViewController {
 
 extension ItemListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let cellViewModel = viewModel.cellViewModel(at: indexPath.row) else { return }
+        didSelectItem?(cellViewModel.date, cellViewModel.price)
+    }
 }
 
 extension ItemListViewController: UITableViewDataSource {
