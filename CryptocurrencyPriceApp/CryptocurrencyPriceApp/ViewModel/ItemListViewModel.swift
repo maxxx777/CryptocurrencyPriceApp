@@ -149,14 +149,15 @@ fileprivate extension ItemListViewModelImp {
         let days = reversedArrayOfDates(from: today, to: startDate)
         
         //it is reasonable to throw error if price in history is missing,
-        //but for simplification "No Data" placeholder is configured
-        dataSource = days.map{ ItemCellViewModel(date: $0.parameterValue,
-                                                 price: historicalPriceIndex[$0] ?? "No Data") }
+        //but for simplification "?" placeholder is configured
+        dataSource = days.map{ ItemCellViewModel(date: $0,
+                                                 price: historicalPriceIndex[$0] ?? "?",
+                                                 currency: Currency.defaultCurrency) }
     }
     
     func updateDataSource(with currentPriceIndex: CurrentPriceIndex, success: SuccessCompletion?, failure: FailureCompletion?) {
         
-        guard let currentPrice = currentPriceIndex[.EUR] else {
+        guard let currentPrice = currentPriceIndex[Currency.defaultCurrency] else {
             handle(error: Errors.missingData, into: failure)
             return
         }
@@ -166,8 +167,9 @@ fileprivate extension ItemListViewModelImp {
             return
         }
         
-        let currentCellViewModel = ItemCellViewModel(date: today.parameterValue,
-                                                     price: currentPrice)
+        let currentCellViewModel = ItemCellViewModel(date: today,
+                                                     price: currentPrice,
+                                                     currency: Currency.defaultCurrency)
         dataSource[0] = currentCellViewModel
         
         handle(success: success)

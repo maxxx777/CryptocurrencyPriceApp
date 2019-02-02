@@ -12,8 +12,8 @@ class ItemTableViewCell: UITableViewCell {
 
     var viewModel: ItemCellViewModel? {
         didSet {
-            self.textLabel?.text = viewModel?.date
-            self.detailTextLabel?.text = viewModel?.price            
+            self.textLabel?.text = viewModel?.dateText
+            self.detailTextLabel?.text = viewModel?.priceText
         }
     }
 }

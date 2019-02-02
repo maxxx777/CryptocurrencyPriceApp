@@ -7,9 +7,19 @@
 //
 
 import Foundation
+import CryptocurrencyPriceService
 
 struct ItemCellViewModel {
     
-    let date: String
+    let date: Date
     let price: String
+    let currency: Currency
+    
+    var dateText: String {
+        return date.parameterValue
+    }
+    
+    var priceText: String {
+        return price + " " + currency.rawValue
+    }
 }
