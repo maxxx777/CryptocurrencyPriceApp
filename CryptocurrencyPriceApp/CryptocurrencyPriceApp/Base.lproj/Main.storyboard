@@ -18,16 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34d-E1-k7g" userLabel="Error View" customClass="ErrorView" customModule="CryptocurrencyPriceApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-Fi-uLi" userLabel="Loading View" customClass="LoadingView" customModule="CryptocurrencyPriceApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRU-0T-Dzr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellId" id="mhM-f9-G9O">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellId" textLabel="Fzl-iq-Baq" detailTextLabel="hFM-RD-yYi" style="IBUITableViewCellStyleValue1" id="mhM-f9-G9O" customClass="ItemTableViewCell" customModule="CryptocurrencyPriceApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mhM-f9-G9O" id="AGN-6J-3DR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fzl-iq-Baq">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hFM-RD-yYi">
+                                                    <rect key="frame" x="301" y="12" width="59" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -39,14 +63,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="VNF-Fi-uLi" firstAttribute="trailing" secondItem="GAb-LP-vrg" secondAttribute="trailing" id="40i-jG-zSv"/>
+                            <constraint firstItem="34d-E1-k7g" firstAttribute="trailing" secondItem="GAb-LP-vrg" secondAttribute="trailing" id="9lB-XZ-wTD"/>
                             <constraint firstItem="JRU-0T-Dzr" firstAttribute="leading" secondItem="GAb-LP-vrg" secondAttribute="leading" id="BWE-xx-sda"/>
                             <constraint firstItem="JRU-0T-Dzr" firstAttribute="trailing" secondItem="GAb-LP-vrg" secondAttribute="trailing" id="FMp-dK-PuM"/>
+                            <constraint firstItem="34d-E1-k7g" firstAttribute="bottom" secondItem="GAb-LP-vrg" secondAttribute="bottom" id="HkF-pR-3zA"/>
                             <constraint firstItem="JRU-0T-Dzr" firstAttribute="top" secondItem="7Jo-H1-M3h" secondAttribute="top" id="UGv-FT-8oV"/>
+                            <constraint firstItem="34d-E1-k7g" firstAttribute="top" secondItem="7Jo-H1-M3h" secondAttribute="top" id="XGM-iA-bjP"/>
+                            <constraint firstItem="VNF-Fi-uLi" firstAttribute="top" secondItem="7Jo-H1-M3h" secondAttribute="top" id="feg-Qn-H7z"/>
+                            <constraint firstItem="VNF-Fi-uLi" firstAttribute="leading" secondItem="GAb-LP-vrg" secondAttribute="leading" id="gpl-vj-OcZ"/>
+                            <constraint firstItem="VNF-Fi-uLi" firstAttribute="bottom" secondItem="GAb-LP-vrg" secondAttribute="bottom" id="lua-WN-E0u"/>
+                            <constraint firstItem="34d-E1-k7g" firstAttribute="leading" secondItem="GAb-LP-vrg" secondAttribute="leading" id="po9-BO-6UP"/>
                             <constraint firstItem="JRU-0T-Dzr" firstAttribute="bottom" secondItem="GAb-LP-vrg" secondAttribute="bottom" id="xnF-LT-aa1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GAb-LP-vrg"/>
                     </view>
                     <connections>
+                        <outlet property="errorView" destination="34d-E1-k7g" id="WFj-Tt-A72"/>
+                        <outlet property="loadingView" destination="VNF-Fi-uLi" id="29O-nx-cr1"/>
                         <outlet property="tableView" destination="JRU-0T-Dzr" id="5QB-aa-70r"/>
                     </connections>
                 </viewController>
