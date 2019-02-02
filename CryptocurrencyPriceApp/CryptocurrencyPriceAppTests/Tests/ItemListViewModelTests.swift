@@ -26,11 +26,11 @@ class ItemListViewModelTests: XCTestCase {
             XCTAssertEqual(viewModel.numberOfItems(), 14, "number of items is wrong")
             
             let todayCellViewModel = viewModel.cellViewModel(at: 0)
-            XCTAssertEqual(todayCellViewModel?.date, "2019-01-20", "date is wrong")
+            XCTAssertEqual(todayCellViewModel?.dateText, "2019-01-20", "date is wrong")
             XCTAssertEqual(todayCellViewModel?.price, "94.7398", "price is wrong")
             
             let lastCellViewModel = viewModel.cellViewModel(at: 13)
-            XCTAssertEqual(lastCellViewModel?.date, "2019-01-07", "date is wrong")
+            XCTAssertEqual(lastCellViewModel?.dateText, "2019-01-07", "date is wrong")
             XCTAssertEqual(lastCellViewModel?.price, "4041.4583", "price is wrong")
             
             exp.fulfill()
@@ -110,11 +110,11 @@ class ItemListViewModelTests: XCTestCase {
                 XCTAssertEqual(viewModel.numberOfItems(), 14, "number of items is wrong")
                 
                 let todayCellViewModel = viewModel.cellViewModel(at: 0)
-                XCTAssertEqual(todayCellViewModel?.date, "2019-01-20", "date is wrong")
+                XCTAssertEqual(todayCellViewModel?.dateText, "2019-01-20", "date is wrong")
                 XCTAssertEqual(todayCellViewModel?.price, "94.7398", "price is wrong")
                 
                 let lastCellViewModel = viewModel.cellViewModel(at: 13)
-                XCTAssertEqual(lastCellViewModel?.date, "2019-01-07", "date is wrong")
+                XCTAssertEqual(lastCellViewModel?.dateText, "2019-01-07", "date is wrong")
                 XCTAssertEqual(lastCellViewModel?.price, "4041.4583", "price is wrong")
                 
                 exp.fulfill()
