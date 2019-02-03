@@ -15,7 +15,7 @@ class AppFactory {
     
     func itemListViewController() -> ItemListViewController {
         
-        let service = CoindeskServiceImp()
+        let service = PriceIndexServiceImp()
         let currentPriceIndexListener = CurrentPriceIndexListenerImp()
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: currentPriceIndexListener)
@@ -28,7 +28,7 @@ class AppFactory {
     
     func itemDetailViewController(with date: Date, prices: [Currency: String]) -> ItemDetailViewController {
         
-        let service = CoindeskServiceImp()
+        let service = PriceIndexServiceImp()
         let currentPriceIndexListener = CurrentPriceIndexListenerImp()
         let viewModel = ItemDetailViewModelImp(service: service,
                                                currentPriceIndexListener: currentPriceIndexListener,

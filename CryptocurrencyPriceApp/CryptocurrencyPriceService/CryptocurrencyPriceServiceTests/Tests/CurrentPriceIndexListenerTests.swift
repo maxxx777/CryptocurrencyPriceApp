@@ -16,7 +16,7 @@ class CurrentPriceIndexListenerTests: XCTestCase {
         //Given
         let exp = expectation(description: "listen to current price index")
         let networking = NetworkingMock(result: .success)
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         let listener = CurrentPriceIndexListenerImp(service: service,
                                                     minimalTimeInterval: 0.5)
         var counter = 0
@@ -41,7 +41,7 @@ class CurrentPriceIndexListenerTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .success)
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         let listener = CurrentPriceIndexListenerImp(service: service,
                                                     minimalTimeInterval: 0.5)
         var counter = 0
@@ -69,7 +69,7 @@ class CurrentPriceIndexListenerTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         let listener = CurrentPriceIndexListenerImp(service: service,
                                                     minimalTimeInterval: 0.5)
         

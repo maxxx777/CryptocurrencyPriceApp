@@ -14,7 +14,7 @@ class ItemDetailViewModelTests: XCTestCase {
     func testCorrectFetchDetails() {
         
         let exp = expectation(description: "fetch details")
-        let service = CoindeskServiceMock(result: .success)
+        let service = PriceIndexServiceMock(result: .success)
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemDetailViewModelImp(service: service,
                                                currentPriceIndexListener: listener,
@@ -39,7 +39,7 @@ class ItemDetailViewModelTests: XCTestCase {
     func testErrorFetchData() {
         
         let exp = expectation(description: "fetch details")
-        let service = CoindeskServiceMock(result: .error(MockingError.anyError))
+        let service = PriceIndexServiceMock(result: .error(MockingError.anyError))
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemDetailViewModelImp(service: service,
                                                currentPriceIndexListener: listener,

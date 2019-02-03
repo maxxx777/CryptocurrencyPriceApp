@@ -1,5 +1,5 @@
 //
-//  CoindeskServiceMock.swift
+//  PriceIndexServiceMock.swift
 //  CryptocurrencyPriceAppTests
 //
 //  Created by MAXIM TSVETKOV on 02.02.19.
@@ -9,7 +9,7 @@
 import Foundation
 import CryptocurrencyPriceService
 
-class CoindeskServiceMock: CoindeskService {
+class PriceIndexServiceMock: PriceIndexService {
     
     enum MockingResult {
         case success
@@ -49,8 +49,7 @@ class CoindeskServiceMock: CoindeskService {
         
     }
     
-    func fetchCurrentPriceIndex(in currency: Currency?,
-                                success: ((CurrentPriceIndex) -> ())?,
+    func fetchCurrentPriceIndex(success: ((CurrentPriceIndex) -> ())?,
                                 failure: Failure?) {
         
         switch result {

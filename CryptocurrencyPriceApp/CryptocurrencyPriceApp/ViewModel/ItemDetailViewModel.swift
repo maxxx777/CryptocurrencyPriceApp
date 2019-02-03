@@ -34,7 +34,7 @@ class ItemDetailViewModelImp {
     
     fileprivate let NoDataText = "No Data"
     
-    private let service: CoindeskService
+    private let service: PriceIndexService
     private let currentPriceIndexListener: CurrentPriceIndexListener
     private let date: Date
     var prices: [Currency: String]
@@ -44,7 +44,7 @@ class ItemDetailViewModelImp {
     // but it may be different for testing purposes
     private let today: Date
     
-    init(service: CoindeskService,
+    init(service: PriceIndexService,
          currentPriceIndexListener: CurrentPriceIndexListener,
          date: Date,
          prices: [Currency: String],

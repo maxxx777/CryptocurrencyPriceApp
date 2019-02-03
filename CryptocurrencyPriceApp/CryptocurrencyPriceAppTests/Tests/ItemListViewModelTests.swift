@@ -14,7 +14,7 @@ class ItemListViewModelTests: XCTestCase {
     func testCorrectFetchData() {
         
         let exp = expectation(description: "fetch data")
-        let service = CoindeskServiceMock(result: .success)
+        let service = PriceIndexServiceMock(result: .success)
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
@@ -43,7 +43,7 @@ class ItemListViewModelTests: XCTestCase {
     func testErrorFetchData() {
         
         let exp = expectation(description: "fetch data")
-        let service = CoindeskServiceMock(result: .error(MockingError.anyError))
+        let service = PriceIndexServiceMock(result: .error(MockingError.anyError))
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
@@ -61,7 +61,7 @@ class ItemListViewModelTests: XCTestCase {
     func testFailFetchHistory() {
         
         let exp = expectation(description: "fetch data")
-        let service = CoindeskServiceMock(result: .failHistoryFetch(MockingError.anyError))
+        let service = PriceIndexServiceMock(result: .failHistoryFetch(MockingError.anyError))
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
@@ -79,7 +79,7 @@ class ItemListViewModelTests: XCTestCase {
     func testFailFetchCurrent() {
         
         let exp = expectation(description: "fetch data")
-        let service = CoindeskServiceMock(result: .failCurrentFetch(MockingError.anyError))
+        let service = PriceIndexServiceMock(result: .failCurrentFetch(MockingError.anyError))
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
@@ -97,7 +97,7 @@ class ItemListViewModelTests: XCTestCase {
     func testCorrectListenCurrentUpdates() {
         
         let exp = expectation(description: "fetch data")
-        let service = CoindeskServiceMock(result: .success)
+        let service = PriceIndexServiceMock(result: .success)
         let listener = CurrentPriceIndexListenerMock(result: .success)
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,
@@ -129,7 +129,7 @@ class ItemListViewModelTests: XCTestCase {
     func testErrorListenCurrentUpdates() {
         
         let exp = expectation(description: "listen current updates")
-        let service = CoindeskServiceMock(result: .success)
+        let service = PriceIndexServiceMock(result: .success)
         let listener = CurrentPriceIndexListenerMock(result: .error(MockingError.anyError))
         let viewModel = ItemListViewModelImp(service: service,
                                              currentPriceIndexListener: listener,

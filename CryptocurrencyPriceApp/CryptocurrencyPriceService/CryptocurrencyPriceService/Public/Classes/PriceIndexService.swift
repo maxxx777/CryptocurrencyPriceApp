@@ -1,5 +1,5 @@
 //
-//  CoindeskService.swift
+//  PriceIndexService.swift
 //  CryptocurrencyPriceService
 //
 //  Created by MAXIM TSVETKOV on 01.02.19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol CoindeskService {
+public protocol PriceIndexService {
     
     // fetch current price index for EUR, USD, GBP
     func fetchCurrentPriceIndex(success: Success<CurrentPriceIndex>?, failure: Failure?)
@@ -20,7 +20,7 @@ public protocol CoindeskService {
     func fetchHistoricalPriceIndex(between startDate: Date, and endDate: Date, in currency: Currency, success: Success<HistoricalPriceIndex>?, failure: Failure?)
 }
 
-public extension CoindeskService {
+public extension PriceIndexService {
     
     // fetch historical price index for specific date and in default currency
     func fetchHistoricalPriceIndex(for date: Date, success: Success<HistoricalPriceIndex>?, failure: Failure?) {
@@ -33,7 +33,7 @@ public extension CoindeskService {
     }
 }
 
-public class CoindeskServiceImp {
+public class PriceIndexServiceImp {
     
     fileprivate var networking: Networking
     
@@ -57,7 +57,7 @@ public class CoindeskServiceImp {
     }
 }
 
-extension CoindeskServiceImp: CoindeskService {
+extension PriceIndexServiceImp: PriceIndexService {
     
     public func fetchCurrentPriceIndex(success: ((CurrentPriceIndex) -> Void)?,
                                        failure: ((Error) -> Void)?) {
@@ -94,7 +94,7 @@ extension CoindeskServiceImp: CoindeskService {
     }
 }
 
-fileprivate extension CoindeskServiceImp {
+fileprivate extension PriceIndexServiceImp {
     
     func call<T: Decodable>(_ endpoint: Endpoint, success: Success<T>?, failure: Failure?) {
         

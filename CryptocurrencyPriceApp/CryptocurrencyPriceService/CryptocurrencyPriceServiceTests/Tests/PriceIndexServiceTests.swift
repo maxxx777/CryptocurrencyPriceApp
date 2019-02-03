@@ -1,5 +1,5 @@
 //
-//  CoindeskServiceTests.swift
+//  PriceIndexServiceTests.swift
 //  CryptocurrencyPriceServiceTests
 //
 //  Created by MAXIM TSVETKOV on 01.02.19.
@@ -9,13 +9,13 @@
 import XCTest
 @testable import CryptocurrencyPriceService
 
-class CoindeskServiceTests: XCTestCase {
+class PriceIndexServiceTests: XCTestCase {
 
     func testSuccessFetchCurrentPriceIndex() {
         
         //Given
         let networking = NetworkingMock(result: .success)
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchCurrentPriceIndex(success: { (priceIndex) in
@@ -32,7 +32,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchCurrentPriceIndex(success: { _ in
@@ -48,7 +48,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .success)
-        let service = CoindeskServiceImp(networking: networking)        
+        let service = PriceIndexServiceImp(networking: networking)        
         
         //When
         service.fetchHistoricalPriceIndex(for: Date.yesterday,
@@ -64,7 +64,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchHistoricalPriceIndex(for: Date.yesterday,
@@ -81,7 +81,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .success)
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchHistoricalPriceIndex(between: Date.dayBeforeYesterday,
@@ -100,7 +100,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchHistoricalPriceIndex(between: Date.dayBeforeYesterday,
@@ -118,7 +118,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchHistoricalPriceIndex(for: Date.today,
@@ -127,7 +127,7 @@ class CoindeskServiceTests: XCTestCase {
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, PriceIndexServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
         }
         
     }
@@ -136,7 +136,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchHistoricalPriceIndex(for: Date.tomorrow,
@@ -145,7 +145,7 @@ class CoindeskServiceTests: XCTestCase {
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, PriceIndexServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
         }
         
     }
@@ -154,7 +154,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchHistoricalPriceIndex(between: Date.today,
@@ -164,7 +164,7 @@ class CoindeskServiceTests: XCTestCase {
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, PriceIndexServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
         }
         
     }
@@ -173,7 +173,7 @@ class CoindeskServiceTests: XCTestCase {
         
         //Given
         let networking = NetworkingMock(result: .error(MockingError.anyError))
-        let service = CoindeskServiceImp(networking: networking)
+        let service = PriceIndexServiceImp(networking: networking)
         
         //When
         service.fetchHistoricalPriceIndex(between: Date.yesterday,
@@ -183,7 +183,7 @@ class CoindeskServiceTests: XCTestCase {
         }) { error in
             //Then
             XCTAssertNotNil(error, "error should not be nil")
-            XCTAssertEqual((error as! LocalizedError).errorDescription, CoindeskServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
+            XCTAssertEqual((error as! LocalizedError).errorDescription, PriceIndexServiceImp.Errors.wrongDateParameter.errorDescription, "error should be thrown correctly")
         }
         
     }

@@ -31,7 +31,7 @@ class ItemListViewModelImp {
         }
     }
     
-    private let service: CoindeskService
+    private let service: PriceIndexService
     private let currentPriceIndexListener: CurrentPriceIndexListener
     
     // this property stores date of the day till that we should show price index.
@@ -46,7 +46,7 @@ class ItemListViewModelImp {
     
     fileprivate var dataSource: [ItemCellViewModel] = []
     
-    init(service: CoindeskService,
+    init(service: PriceIndexService,
          currentPriceIndexListener: CurrentPriceIndexListener,
          today: Date = Date(),
          numberOfDays: Int = 14) {

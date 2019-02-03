@@ -24,7 +24,7 @@ public class CurrentPriceIndexListenerImp {
     fileprivate var success: Success<CurrentPriceIndex>?
     fileprivate var failure: Failure?
     
-    fileprivate var service: CoindeskService
+    fileprivate var service: PriceIndexService
     fileprivate var minimalTimeInterval: TimeInterval
     fileprivate var timeInterval: TimeInterval
     
@@ -33,12 +33,12 @@ public class CurrentPriceIndexListenerImp {
     fileprivate var stop = true
     
     public init() {
-        self.service = CoindeskServiceImp()
+        self.service = PriceIndexServiceImp()
         self.minimalTimeInterval = CoindeskMinimalTimeInterval
         self.timeInterval = CoindeskMinimalTimeInterval
     }
     
-    init(service: CoindeskService,
+    init(service: PriceIndexService,
          minimalTimeInterval: TimeInterval = CoindeskMinimalTimeInterval) {
         self.service = service
         self.minimalTimeInterval = minimalTimeInterval
