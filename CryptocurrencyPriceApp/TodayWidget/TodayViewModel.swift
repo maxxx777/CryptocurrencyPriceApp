@@ -87,6 +87,6 @@ fileprivate extension TodayViewModelImp {
     
     func displayPriceText(with price: String) -> String {
         
-        return "1 BTC = \(price) \(Currency.defaultCurrency)"
+        return "Now 1 BTC = \(price) \(Currency.defaultCurrency)"
     }
 }
