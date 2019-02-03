@@ -50,6 +50,14 @@ public class CurrentPriceIndexListenerImp {
     }
 }
 
+public extension CurrentPriceIndexListener {
+    
+    func start(success: Success<CurrentPriceIndex>?,
+               failure: Failure?) {
+        start(with: CoindeskMinimalTimeInterval, success: success, failure: failure)
+    }
+}
+
 extension CurrentPriceIndexListenerImp: CurrentPriceIndexListener {
     
     public func start(with timeInterval: TimeInterval,

@@ -152,8 +152,7 @@ fileprivate extension ItemDetailViewModelImp {
     
     func startListenCurrentUpdates(success: SuccessCompletion?, failure: FailureCompletion?) {
         
-        currentPriceIndexListener.start(with: 60.0,
-                                        success: { [weak self] currentPriceIndex in
+        currentPriceIndexListener.start(success: { [weak self] currentPriceIndex in
                                             self?.time = currentPriceIndex.timeOfUpdate
                                             self?.updatePrice(with: currentPriceIndex, success: success, failure: failure)
         }) { [weak self] error in
