@@ -16,7 +16,14 @@ struct ItemCellViewModel {
     let currency: Currency
     
     var dateText: String {
-        return date.parameterValue
+        
+        if date.isToday {
+            return "Now"
+        } else if date.isYesterday {
+            return "Yesterday"
+        } else {
+            return date.parameterValue
+        }        
     }
     
     var priceText: String {

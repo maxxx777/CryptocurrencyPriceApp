@@ -74,7 +74,13 @@ extension ItemDetailViewModelImp: ItemDetailViewModel {
     }
     
     var dateText: String {
-        return date.parameterValue
+        if date.isToday {
+            return "Now"
+        } else if date.isYesterday {
+            return "Yesterday"
+        } else {
+            return date.parameterValue
+        }
     }
     
     var eurPrice: String {
