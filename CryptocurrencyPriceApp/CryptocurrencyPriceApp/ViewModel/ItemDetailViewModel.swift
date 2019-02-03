@@ -38,6 +38,7 @@ class ItemDetailViewModelImp {
     private let currentPriceIndexListener: CurrentPriceIndexListener
     private let date: Date
     var prices: [Currency: String]
+    fileprivate var time: Date?
     
     // this property stores date of the day till that we should show price index.
     // it should be today date by default,
@@ -75,7 +76,12 @@ extension ItemDetailViewModelImp: ItemDetailViewModel {
     
     var dateText: String {
         if date.isToday {
-            return "Now"
+            guard let time = time else { return "Now" }
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            
+            return "Today, " + dateFormatter.string(from: time)
         } else if date.isYesterday {
             return "Yesterday"
         } else {
@@ -148,6 +154,7 @@ fileprivate extension ItemDetailViewModelImp {
         
         currentPriceIndexListener.start(with: 60.0,
                                         success: { [weak self] currentPriceIndex in
+                                            self?.time = currentPriceIndex.timeOfUpdate
                                             self?.updatePrice(with: currentPriceIndex, success: success, failure: failure)
         }) { [weak self] error in
             self?.finishListenCurrentUpdates()

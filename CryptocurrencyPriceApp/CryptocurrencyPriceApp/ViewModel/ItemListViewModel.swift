@@ -169,7 +169,8 @@ fileprivate extension ItemListViewModelImp {
         
         let currentCellViewModel = ItemCellViewModel(date: today,
                                                      price: currentPrice,
-                                                     currency: Currency.defaultCurrency)
+                                                     currency: Currency.defaultCurrency,
+                                                     time: currentPriceIndex.timeOfUpdate)
         dataSource[0] = currentCellViewModel
         
         handle(success: success)
