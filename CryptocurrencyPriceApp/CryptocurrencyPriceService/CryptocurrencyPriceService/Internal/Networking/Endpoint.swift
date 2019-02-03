@@ -11,7 +11,6 @@ import Foundation
 enum Endpoint {
     
     case currentPriceIndex
-    case currentPriceIndexIn(Currency)
     case historicalPriceIndex(Date, Currency)
     case historicalPriceIndexRange(Date, Date, Currency)
 }
@@ -31,9 +30,7 @@ extension Endpoint {
     private var path: String {
         switch self {
         case .currentPriceIndex:
-            return "/currentprice.json"
-        case let .currentPriceIndexIn(currency):
-            return "/currentprice/\(currency).json"
+            return "/currentprice.json"        
         case let .historicalPriceIndex(date, currency):
             let stringValueForDate = date.parameterValue
             return "/historical/close.json?start=\(stringValueForDate)&end=\(stringValueForDate)&currency=\(currency)"

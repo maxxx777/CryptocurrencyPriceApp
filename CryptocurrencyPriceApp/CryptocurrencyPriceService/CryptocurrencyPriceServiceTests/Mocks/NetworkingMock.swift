@@ -36,7 +36,7 @@ class NetworkingMock: Networking {
     func call(_ endpoint: Endpoint, completion: @escaping (Result) -> Void) {
         
         switch endpoint {
-        case .currentPriceIndex, .currentPriceIndexIn(_):
+        case .currentPriceIndex:
             switch result {
             case .success:
                 let data = self.data(from: "CurrentPriceIndexStubbedResponse")

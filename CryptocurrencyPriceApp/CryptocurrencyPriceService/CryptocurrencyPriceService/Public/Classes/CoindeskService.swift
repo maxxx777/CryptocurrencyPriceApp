@@ -10,8 +10,8 @@ import Foundation
 
 public protocol CoindeskService {
     
-    // fetch current price index for specific currency
-    func fetchCurrentPriceIndex(in currency: Currency?, success: Success<CurrentPriceIndex>?, failure: Failure?)
+    // fetch current price index for EUR, USD, GBP
+    func fetchCurrentPriceIndex(success: Success<CurrentPriceIndex>?, failure: Failure?)
     
     // fetch historical price index for specific date and in specific currency
     func fetchHistoricalPriceIndex(for date: Date, in currency: Currency, success: Success<HistoricalPriceIndex>?, failure: Failure?)
@@ -21,11 +21,6 @@ public protocol CoindeskService {
 }
 
 public extension CoindeskService {
-    
-    // fetch current price index for EUR, USD, GBP
-    func fetchCurrentPriceIndex(success: Success<CurrentPriceIndex>?, failure: Failure?) {
-        fetchCurrentPriceIndex(in: nil, success: success, failure: failure)
-    }
     
     // fetch historical price index for specific date and in default currency
     func fetchHistoricalPriceIndex(for date: Date, success: Success<HistoricalPriceIndex>?, failure: Failure?) {
@@ -64,11 +59,10 @@ public class CoindeskServiceImp {
 
 extension CoindeskServiceImp: CoindeskService {
     
-    public func fetchCurrentPriceIndex(in currency: Currency?,
-                                success: ((CurrentPriceIndex) -> Void)?,
-                                failure: ((Error) -> Void)?) {
+    public func fetchCurrentPriceIndex(success: ((CurrentPriceIndex) -> Void)?,
+                                       failure: ((Error) -> Void)?) {
         
-        let endpoint = Endpoint.makeCurrentPriceIndexEndpoint(with: currency)
+        let endpoint = Endpoint.currentPriceIndex
         
         call(endpoint, success: success, failure: failure)
     }
@@ -139,19 +133,6 @@ fileprivate extension CoindeskServiceImp {
         
         DispatchQueue.main.async {
             failure?(error)
-        }
-    }
-}
-
-fileprivate extension Endpoint {
-    
-    // factory to choose endpoint to get current price index depending on whether currency is specified or not
-    static func makeCurrentPriceIndexEndpoint(with currency: Currency?) -> Endpoint {
-        
-        if let currency = currency {
-            return Endpoint.currentPriceIndexIn(currency)
-        } else {
-            return Endpoint.currentPriceIndex
         }
     }
 }
