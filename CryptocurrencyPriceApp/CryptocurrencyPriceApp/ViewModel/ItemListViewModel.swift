@@ -88,7 +88,7 @@ extension ItemListViewModelImp: ItemListViewModel {
     }
 }
 
-//MARK: Listen current price index helpers
+//MARK: Fetch data
 
 fileprivate extension ItemListViewModelImp {
     
