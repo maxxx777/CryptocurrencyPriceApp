@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7514DD782205E6C9009E1E89 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DD772205E6C8009E1E89 /* Date+Extension.swift */; };
+		7514DDC622066E99009E1E89 /* TimeUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7514DDC522066E99009E1E89 /* TimeUpdate.swift */; };
 		75E96BA42204414F00B9B656 /* CryptocurrencyPriceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E96B9A2204414F00B9B656 /* CryptocurrencyPriceService.framework */; };
 		75E96BE2220449F600B9B656 /* CryptocurrencyPriceService.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75E96C1022047E2300B9B656 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E96C0B22047E2300B9B656 /* Networking.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		7514DD772205E6C8009E1E89 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		7514DDC522066E99009E1E89 /* TimeUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUpdate.swift; sourceTree = "<group>"; };
 		75E96B9A2204414F00B9B656 /* CryptocurrencyPriceService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptocurrencyPriceService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96BA32204414F00B9B656 /* CryptocurrencyPriceServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptocurrencyPriceServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E96BBE2204440F00B9B656 /* CryptocurrencyPriceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptocurrencyPriceService.h; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				75E96C4B2205081100B9B656 /* CurrencyDetails.swift */,
+				7514DDC522066E99009E1E89 /* TimeUpdate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				75E96C6322050D1900B9B656 /* CurrentPriceIndexListener.swift in Sources */,
 				75E96C5F22050BF800B9B656 /* CurrentPriceIndex.swift in Sources */,
 				75E96C1122047E2300B9B656 /* Result.swift in Sources */,
+				7514DDC622066E99009E1E89 /* TimeUpdate.swift in Sources */,
 				7514DD782205E6C9009E1E89 /* Date+Extension.swift in Sources */,
 				75E96C5E22050BF800B9B656 /* HistoricalPriceIndex.swift in Sources */,
 				75E96C6222050D1900B9B656 /* PriceIndexService.swift in Sources */,
