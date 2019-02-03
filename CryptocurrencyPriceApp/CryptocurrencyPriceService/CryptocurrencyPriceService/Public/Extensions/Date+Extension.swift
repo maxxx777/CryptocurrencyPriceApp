@@ -30,4 +30,14 @@ public extension Date {
         
         return Calendar.current.compare(self, to: date, toGranularity: .day) == .orderedDescending
     }
+    
+    var isToday: Bool {
+        
+        return Calendar.current.compare(self, to: Date(), toGranularity: .day) == .orderedSame
+    }
+    
+    var isYesterday: Bool {
+        
+        return Calendar.current.compare(self, to: Date() - 24*60*60, toGranularity: .day) == .orderedSame
+    }
 }

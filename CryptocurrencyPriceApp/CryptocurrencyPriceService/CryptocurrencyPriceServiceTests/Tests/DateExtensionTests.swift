@@ -45,4 +45,30 @@ class DateExtensionTests: XCTestCase {
         XCTAssertFalse(Date.yesterday.isFutureDay(after: Date.today), "It should not be future day")
         XCTAssertFalse(Date.today.isFutureDay(after: Date.today), "It should not be future day")
     }
+    
+    func testIsTodayTrue() {
+        
+        //Then
+        XCTAssert(Date.today.isToday, "It should be today")
+    }
+    
+    func testIsTodayFalse() {
+        
+        //Then
+        XCTAssertFalse(Date.tomorrow.isToday, "It should not be today")
+        XCTAssertFalse(Date.yesterday.isToday, "It should not be today")
+    }
+    
+    func testIsYesterdayTrue() {
+        
+        //Then
+        XCTAssert(Date.yesterday.isYesterday, "It should be yesterday")
+    }
+    
+    func testIsYesterdayFalse() {
+        
+        //Then
+        XCTAssertFalse(Date.dayBeforeYesterday.isYesterday, "It should not be yesterday")
+        XCTAssertFalse(Date.today.isYesterday, "It should not be yesterday")
+    }
 }
